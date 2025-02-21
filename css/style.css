@@ -182,6 +182,12 @@ html {
     color: inherit;
 }
 
+.sidebar a {
+    text-decoration: none; /* Removes underline */
+    color: inherit;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body.page-about .left-section,
 body.page-projects .left-section,
 body.page-skills .left-section,
