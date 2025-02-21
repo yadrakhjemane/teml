@@ -10,6 +10,7 @@
     --border-color: #e0e0e0;
     --button-bg: #209fb6;
     --button-text: #ffffff;
+    --skill: #868686;
 }
 
 /* Dark Mode */
@@ -24,6 +25,7 @@
     --border-color: #333333;
     --button-bg: #48c1d9;
     --button-text: #121212;
+    --skill: #444;
 }
 
 /* Fonts */
@@ -87,6 +89,9 @@ html {
     text-align: center;
     margin-bottom: 2vh;
     color: var(--title-color);
+    background: var(--heading-color);
+    padding: 5px 15px;
+    border-radius: 15px;
 }
 
 
@@ -526,6 +531,11 @@ button:hover {
     position: relative;
     text-align: center;
     cursor: pointer;
+    background-color: var(--skill);
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 1vw;
+
 }
 
 .skill .icon {

@@ -240,7 +240,7 @@ function addNewTestimonial() {
         return;
     }
 
-    const userEmail = prompt("Enter your email to confirm:");
+    const userEmail = prompt("Enter my email to confirm your identity:");
     if (userEmail !== "shailpatel.connect@gmail.com") {
         alert("Email verification failed.");
         return;
