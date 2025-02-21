@@ -443,22 +443,17 @@ button:hover {
     top: 50%;
     width: 40px;
     height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: var(--title-color);
     font-weight: bold;
     font-size: 2vw;
     border-radius: 50%;
-    text-align: center;
     transform: translateY(-50%);
+    padding: 3%;
 }
 
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* On hover, add a black background color with transparency */
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 
 .dot-container {
     text-align: center;
@@ -508,7 +503,7 @@ button:hover {
 
 /* Number text (1/3 etc) */
 .pnumber {
-    color: #f2f2f2;
+    color: var(--title-color);
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
@@ -663,6 +658,8 @@ button:hover {
     gap: 1vw;
     margin-bottom: 2vh;
 }
+
+
 
 /* General Button Styling */
 .semester-buttons button {
@@ -820,17 +817,27 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
 }
 
 input, textarea {
-    width: 100%;
+    width: 10vw;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
+textarea {
+    height: 5vw;
+    resize: none;
+}
+
 label {
     font-size: 14px;
+}
+
+.testimonial-writer .testimonial-message{
+    width: auto;
 }
 
 input[type="checkbox"] {

@@ -14,7 +14,9 @@
         <!-- Landing Section -->
         <section class="section" id="landing">
             <div class="profile-container">
-                <img src="images/profile-pic.png" alt="Casual Shail" class="profile-photo-landing">
+                <a id="theme-toggle">
+                    <img src="images/profile-pic.png" alt="Me in Wild" class="profile-photo-landing">
+                </a>
             </div>
             <h1 class="name">SHAIL K PATEL</h1>
             <h2 class="role">Machine Learning Enthusiast</h2>
@@ -54,7 +56,6 @@
             </nav>
             <br>
             <br>
-            <button id="theme-toggle">Toggle Mode</button>
             <div class="social-media">
                 <a href="https://github.com" title="GitHub" target="_blank">
                     <img src="images/logo/github.png" alt="GitHub Logo" class="social-icon">
@@ -245,7 +246,7 @@
                     <p class="year">2023 - 2027</p>
                 </div>
                 <div class="semester-buttons">
-                    <button onclick="showSkills(1)">Sem 1</button>
+                    <button onclick="showSkills(1)" class="active">Sem 1</button>
                     <button onclick="showSkills(2)">Sem 2</button>
                     <button onclick="showSkills(3)">Sem 3</button>
                     <button class="blocked">Sem 4</button>

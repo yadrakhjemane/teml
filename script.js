@@ -241,6 +241,28 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const leftSection = document.querySelector(".left-section");
+    const landingSection = document.querySelector("#landing");
+
+    if (!leftSection || !landingSection) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    leftSection.style.display = "none"; // Instantly hide on landing
+                } else {
+                    leftSection.style.display = "flex"; // Instantly show on scroll
+                }
+            });
+        },
+        { threshold: 0.5 } // Adjusts sensitivity (50% of landing section must be visible)
+    );
+
+    observer.observe(landingSection);
+});
+
 
 
 class OrderedHashMap {

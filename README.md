@@ -1,1 +1,1 @@
-live hosted: https://github.com/ShailKPatel/Portfolio-Website
+live hosted: https://shailkpatel.github.io/Portfolio-Website/
