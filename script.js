@@ -1,18 +1,17 @@
 // JavaScript for Portfolio Website
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Variables
     const themeToggleButton = document.getElementById("theme-toggle");
-    const body = document.body;
 
     // Full Page Scroll Snap with Infinite Scroll
     document.addEventListener("wheel", (e) => {
         const sections = document.querySelectorAll(".section");
         const currentIndex = Math.round(window.scrollY / window.innerHeight);
-    
+
         let nextIndex = e.deltaY > 0 ? currentIndex + 1 : currentIndex - 1;
         if (nextIndex >= sections.length) nextIndex = 0; // Loop to first section
         if (nextIndex < 0) nextIndex = sections.length - 1; // Loop to last section
-    
+
         sections[nextIndex].scrollIntoView({ behavior: "instant" });
     });
 
@@ -32,30 +31,23 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Flip Card Logic in About Section
-    // let flipState = 0; // 0 = photo, 1 = first text, 2 = second text
-    // const card = document.querySelector(".card"); // The card container
-    // const cardInner = document.querySelector(".card-inner"); // The flipping inner content
-
-
-
-    // card.addEventListener("click", () => {
-    //     if (flipState === 0) {
-    //         // Flip to first text
-    //         cardInner.classList.add("flipped-right");
-    //         flipState = 1;
-
-    //     } else if (flipState === 1) {
-    //         // Flip to second text
-    //         cardInner.classList.remove("flipped-right");
-    //         cardInner.classList.add("flipped-top");
-    //         flipState = 2;
-    //     } else if (flipState === 2) {
-    //         // Flip back to photo
-    //         cardInner.classList.remove("flipped-top");
-    //         flipState = 0;
-    //     }
-    // });
+    // Initialize Swiper
+    document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    });
+    
 
     // Project Navigation Logic
     let currentProjectIndex = 0;
@@ -72,14 +64,14 @@ document.addEventListener("DOMContentLoaded", function() {
         nextButton.disabled = currentProjectIndex === projectSections.length - 1;
     }
 
-    prevButton.addEventListener("click", function() {
+    prevButton.addEventListener("click", function () {
         if (currentProjectIndex > 0) {
             currentProjectIndex--;
             updateProjectVisibility();
         }
     });
 
-    nextButton.addEventListener("click", function() {
+    nextButton.addEventListener("click", function () {
         if (currentProjectIndex < projectSections.length - 1) {
             currentProjectIndex++;
             updateProjectVisibility();
@@ -89,55 +81,218 @@ document.addEventListener("DOMContentLoaded", function() {
     updateProjectVisibility();
 });
 
+// Show Skills based on Semester
 function showSkills(sem) {
-    document.querySelectorAll('.college-skills-list').forEach(list => list.classList.remove('active'));
-    document.querySelectorAll('.semester-buttons button').forEach(button => button.classList.remove('active'));
-    
-    let selectedList = document.getElementById('college-skills-list-' + sem);
-    let selectedButton = document.querySelector('.semester-buttons button:nth-child(' + sem + ')');
-    
+    document.querySelectorAll(".college-skills-list").forEach((list) =>
+        list.classList.remove("active")
+    );
+    document.querySelectorAll(".semester-buttons button").forEach((button) =>
+        button.classList.remove("active")
+    );
+
+    let selectedList = document.getElementById("college-skills-list-" + sem);
+    let selectedButton = document.querySelector(
+        ".semester-buttons button:nth-child(" + sem + ")"
+    );
+
     if (selectedList) {
-        selectedList.classList.add('active');
+        selectedList.classList.add("active");
     }
     if (selectedButton) {
-        selectedButton.classList.add('active');
+        selectedButton.classList.add("active");
     }
 }
 
-
+// Typewriter Effect
 const text = [
-    "I am a Machine Learning Enthusiast.",
-    "I am doing my Bachelor of Engineering in AI & ML from LJ University in Ahmedabad. I aspire to work on the bleeding edge of Machine Learning and am looking for work opportunities.",
-    "My goal is to work on real-world AI applications and contribute to innovative projects that leverage AI and Machine Learning for solving complex problems.",
-    "I am passionate about using AI for social good, such as improving healthcare, education, and environmental sustainability through cutting-edge technologies.",
-    "Currently, I am constantly learning new techniques and tools in AI to stay up-to-date with the latest advancements in the field.",
-    "Feel free to reach out if you're looking for a passionate and driven AI enthusiast to collaborate with on exciting projects."
+    "Machine Learning nerd with big dreams. 🤖",
+    "B.E. AI & ML @ LJ University, Ahmedabad. Still human (for now).",
+    "Obsessed with cutting-edge ML—because the future won’t build itself!",
+    "AI for social good? Count me in! Healthcare, education, sustainability—you name it.",
+    "Always learning, always coding, always caffeinated. ☕",
+    "Got a cool AI project? Let’s make some magic happen! ✨",
 ];
 
-let i = 0, j = 0;
+let i = 0,
+    j = 0;
 
 function typeWriter() {
     const typewriterText = document.getElementById("typewriter-text");
 
-    // Type out the current text character by character
     if (i < text[j].length) {
         typewriterText.textContent += text[j].charAt(i);
         i++;
-        setTimeout(typeWriter, 40); // Slightly faster typing speed (reduced delay)
-    } 
-    // Move to the next chunk of text
-    else if (j < text.length - 1) {
-        typewriterText.innerHTML += "<br><br> ";  // Add a break between sentences/paragraphs
+        setTimeout(typeWriter, 40);
+    } else if (j < text.length - 1) {
+        typewriterText.innerHTML += "<br><br>";
         j++;
         i = 0;
-        setTimeout(typeWriter, 500);  // Add a pause before moving to the next line of text
+        setTimeout(typeWriter, 500);
     }
 }
 
-// Ensure the text wraps and stays inside the screen without overflowing
 document.addEventListener("DOMContentLoaded", function () {
     const typewriterText = document.getElementById("typewriter-text");
-    typewriterText.style.whiteSpace = "pre-wrap";  // Ensure text wraps correctly
-    typewriterText.style.caretColor = "transparent"; // Hide the cursor
+    typewriterText.style.whiteSpace = "pre-wrap";
+    typewriterText.style.caretColor = "transparent";
     typeWriter();
 });
+
+// Slideshow
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides((slideIndex += n));
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("mySlides");
+
+    if (n > slides.length) {
+        slideIndex = 1;
+    }
+    if (n < 1) {
+        slideIndex = slides.length;
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    showSlides(slideIndex);
+});
+
+// Dark Mode Toggle
+document.addEventListener("DOMContentLoaded", () => {
+    const toggleButton = document.getElementById("theme-toggle");
+
+    if (!toggleButton) {
+        console.error("Theme toggle button not found!");
+        return;
+    }
+
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+    }
+
+    const systemPreference = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+    const savedTheme = localStorage.getItem("theme") || systemPreference;
+    setTheme(savedTheme);
+
+    toggleButton.addEventListener("click", () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        setTheme(currentTheme === "dark" ? "light" : "dark");
+    });
+});
+
+
+
+class OrderedHashMap {
+    constructor(maxSize) {
+        this.maxSize = maxSize;
+        this.data = [];
+    }
+
+    add(key, value) {
+        if (this.data.some(item => item.key === key)) {
+            return; // Prevent duplicate keys
+        }
+
+        if (this.data.length >= this.maxSize) {
+            this.data.pop(); // Remove the oldest entry when exceeding max size
+        }
+
+        this.data.unshift({ key, value }); // Add new entry at the beginning
+    }
+
+    getAll() {
+        return this.data;
+    }
+}
+
+// Create a new testimonial manager with max 6 entries
+const testimonialManager = new OrderedHashMap(6);
+
+function addNewTestimonial() {
+    const name = document.getElementById("testimonial-writer").value.trim();
+    const message = document.getElementById("testimonial-message").value.trim();
+
+    if (!name || !message) {
+        alert("Please enter your name and testimonial.");
+        return;
+    }
+
+    if (name.length > 10) {
+        alert("Name must not exceed 10 characters.");
+        return;
+    }
+
+    if (message.length > 50) {
+        alert("Testimonial must not exceed 50 characters.");
+        return;
+    }
+
+    const userEmail = prompt("Enter your email to confirm:");
+    if (userEmail !== "shailpatel.connect@gmail.com") {
+        alert("Email verification failed.");
+        return;
+    }
+
+    testimonialManager.add(name, message);
+    renderTestimonials();
+
+    // Reset form
+    document.getElementById("testimonial-writer").value = "";
+    document.getElementById("testimonial-message").value = "";
+}
+
+
+
+
+function renderTestimonials() {
+    const list = document.getElementById("testimonial-list");
+    list.innerHTML = ""; // Clear existing testimonials
+
+    const testimonials = testimonialManager.getAll();
+
+    if (testimonials.length === 0) {
+        list.innerHTML = `<p class="no-testimonials">No Testimonials yet.</p>`;
+        list.style = `display: block`;
+        return;
+    }
+    else{
+        list.innerHTML = "";
+        list.style.display = "grid";
+        list.style.gridTemplateColumns = "repeat(3, 1fr)";
+        list.style.gridTemplateRows = "repeat(2, auto)";
+        list.style.padding = "5%";
+        list.style.gap = "5%";
+        list.style.justifyContent = "center";
+        list.style.overflow = "hidden";
+        list.style.fontSize = "1vw";  // Font size based on viewport width
+        list.style.fontFamily = "Arial, sans-serif";  // Font family
+    }
+
+    testimonials.forEach(({ key, value }) => {
+        const box = document.createElement("div");
+        box.classList.add("testimonial-box");
+
+        box.innerHTML = `
+            <p class="testimonial-message">"${value}"</p>
+            <p class="testimonial-author">— ${key}</p>
+        `;
+
+        list.appendChild(box);
+    });
+}
+
+// Initialize empty state
+renderTestimonials();
