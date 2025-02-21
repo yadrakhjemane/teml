@@ -1,26 +1,74 @@
 // JavaScript for Portfolio Website
 document.addEventListener("DOMContentLoaded", function () {
-    // Variables
+    // Theme Toggle Button (if applicable)
     const themeToggleButton = document.getElementById("theme-toggle");
+
+    // Function to get all sections
+    function getSections() {
+        return document.querySelectorAll(".section");
+    }
+
+    // Function to get the current visible section index
+    function getCurrentIndex() {
+        return Math.round(window.scrollY / window.innerHeight);
+    }
+
+    // Smooth Scroll to a specific section index
+    function scrollToSection(index) {
+        const sections = getSections();
+        if (index >= 0 && index < sections.length) {
+            sections[index].scrollIntoView({ behavior: "smooth" });
+        }
+    }
 
     // Full Page Scroll Snap with Infinite Scroll
     document.addEventListener("wheel", (e) => {
-        const sections = document.querySelectorAll(".section");
-        const currentIndex = Math.round(window.scrollY / window.innerHeight);
-
+        const sections = getSections();
+        let currentIndex = getCurrentIndex();
         let nextIndex = e.deltaY > 0 ? currentIndex + 1 : currentIndex - 1;
-        if (nextIndex >= sections.length) nextIndex = 0; // Loop to first section
-        if (nextIndex < 0) nextIndex = sections.length - 1; // Loop to last section
 
-        sections[nextIndex].scrollIntoView({ behavior: "instant" });
+        // Infinite scroll behavior (looping back)
+        if (nextIndex >= sections.length) {
+            nextIndex = 0; // Loop back to first section
+        } else if (nextIndex < 0) {
+            nextIndex = sections.length - 1; // Loop to last section
+        }
+
+        // Smooth scroll to the target section
+        scrollToSection(nextIndex);
+    });
+
+    // Handle arrow key navigation with infinite scrolling at edges
+    document.addEventListener("keydown", (e) => {
+        const sections = getSections();
+        let currentIndex = getCurrentIndex();
+
+        if (e.key === "ArrowDown") {
+            // If at the last section, jump to first
+            if (currentIndex === sections.length - 1) {
+                scrollToSection(0);
+            } else {
+                scrollToSection(currentIndex + 1);
+            }
+        } else if (e.key === "ArrowUp") {
+            // If at the first section, jump to last
+            if (currentIndex === 0) {
+                scrollToSection(sections.length - 1);
+            } else {
+                scrollToSection(currentIndex - 1);
+            }
+        }
     });
 
     // Dynamic Body Class Update on Scroll
     document.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll(".section");
+        const sections = getSections();
         const scrollY = window.scrollY;
 
-        document.body.className = ""; // Clear previous classes
+        // Clear previous body classes
+        document.body.className = "";
+
+        // Add a class corresponding to the currently viewed section
         sections.forEach((section) => {
             const offsetTop = section.offsetTop;
             const offsetHeight = section.offsetHeight;
@@ -30,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
 
     // Initialize Swiper
     document.addEventListener("DOMContentLoaded", function () {
@@ -139,33 +188,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Slideshow
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides((slideIndex += n));
-}
+let slideIndex = 0;
+const slides = document.querySelectorAll(".mySlides");
+const dots = document.querySelectorAll(".dot");
 
 function showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
+    if (n >= slides.length) { slideIndex = 0; }
+    if (n < 0) { slideIndex = slides.length - 1; }
 
-    if (n > slides.length) {
-        slideIndex = 1;
-    }
-    if (n < 1) {
-        slideIndex = slides.length;
-    }
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
+    slides.forEach((slide, i) => {
+        slide.style.display = i === slideIndex ? "block" : "none";
+        dots[i].classList.toggle("active", i === slideIndex);
+    });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function plusSlides(n) {
+    slideIndex += n;
     showSlides(slideIndex);
-});
+}
+
+function currentSlide(n) {
+    slideIndex = n - 1;
+    showSlides(slideIndex);
+}
+
+// Initial display
+showSlides(slideIndex);
 
 // Dark Mode Toggle
 document.addEventListener("DOMContentLoaded", () => {
