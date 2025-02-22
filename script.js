@@ -1,7 +1,5 @@
 // JavaScript for Portfolio Website
 document.addEventListener("DOMContentLoaded", function () {
-    // Theme Toggle Button (if applicable)
-    const themeToggleButton = document.getElementById("theme-toggle");
 
     // Function to get all sections
     function getSections() {
@@ -80,22 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Initialize Swiper
-    document.addEventListener("DOMContentLoaded", function () {
-        new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    });
+
     
 
     // Project Navigation Logic
@@ -347,7 +330,7 @@ function renderTestimonials() {
         list.style.gap = "5%";
         list.style.justifyContent = "center";
         list.style.overflow = "hidden";
-        list.style.fontSize = "1vw";  // Font size based on viewport width
+        list.style.fontSize = "2.5vw";  // Font size based on viewport width
         list.style.fontFamily = "Arial, sans-serif";  // Font family
     }
 

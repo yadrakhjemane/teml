@@ -323,28 +323,68 @@ button:hover {
 
 /* Responsive Styles */
 @media (max-width: 950px) {
+    /* Hide the fixed left sidebar */
     .left-section {
-        display: none !important; /* Completely hide left section for mobile and tblet*/
+        display: none !important;
     }
 
+    /* Make the main content full width */
     .main-content {
         margin-left: 0;
         width: 100vw;
+        padding: 3vh;
+        text-align: center;
+        content: center;
     }
 
+    /* Adjust profile photo size */
+    .profile-photo-landing {
+        margin-top: 15%;
+        width: 40vw;
+    }
+
+    /* Responsive font sizes */
+    .name {
+        font-size: 12vw;
+        padding-top: 15%;
+    }
+
+    .role {
+        font-size: 8vw;
+    }
+
+    .myquote {
+        font-size: 10vw;
+
+    }
+
+    /* Adjust social media icon sizes */
     .social-icon {
-        width: 8vw;
-        height: 8vw;
+        width: 16vw;
+        margin-bottom: 10%;
     }
 
+    /* Ensure "Go to Top" button is visible */
     .go-to-top {
-        display: block; /* Show Go to Top button on smaller screens */
+        display: block;
+        bottom: 2rem;
+        right: 2rem;
     }
 
     .go-to-top img {
-        width: 8vw;
-        height: 8vw;
+        width: 10vw;
+        height: 10vw;
     }
+
+
+
+    #landing {
+        height: 100vh !important;
+        align-content: center;
+        margin-top: 20%;
+    }
+
+
 }
 
 /* End */
@@ -396,11 +436,18 @@ button:hover {
 #typewriter-head .name {
     font-family: 'Cabin Sketch', sans-serif;
     font-size: 6vh;
-
+    
 }
 
 
-
+@media (max-width: 950px) {
+    #typewriter-text {
+        font-size: 5vw;
+    }
+    #typewriter-head {
+        font-size: 5vw;
+    }
+}
 /* End */
 
 
@@ -521,11 +568,37 @@ button:hover {
     to { opacity: 1; }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .prev, .next, .text {
-        font-size: 11px;
+@media (max-width: 950px) {
+
+    .slideshow-container {
+        margin-left: 0%;
+        margin-right: 70.5%;
+        padding-left: 0%;
+        padding-right: 0%;
     }
+        
+    .mySlides {
+        margin: 0%;
+        padding: 0%;
+        width: 100vw;
+    }
+    
+    .pnumber{
+        display: none;
+    }
+    
+    .prev { left: 10px; font-size: large;}
+    .next { left: 85vw; font-size: large; }
+
+
+    .pname{
+        font-size: 4vh;
+    }
+
+    .pdisc{
+        font-size: 2vh;
+    }
+
 }
 
 
@@ -562,7 +635,6 @@ button:hover {
     position: relative;
     text-align: center;
     cursor: pointer;
-    /* background-color: var(--skill); */
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 1vw;
@@ -628,6 +700,23 @@ button:hover {
     opacity: 1;
 }
 
+@media (max-width: 950px) {
+    .skills-grid{
+        width: 100%;
+        height: 100%;
+    }
+
+    .skill{
+        margin-top: 35%;
+        margin-bottom: 35%;
+    }
+
+    .skill .icon {
+        width: 13vw; /* Default size */
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
 /* End */
 
 
@@ -675,7 +764,7 @@ button:hover {
     cursor: pointer;
     background-color: #007BFF;
     color: white;
-    border-radius: 0.5vw;
+    border-radius: 1vw;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -688,11 +777,11 @@ button:hover {
 
 /* Blocked Semester Styling */
 .semester-buttons button.blocked {
-    background-color: #28a745; /* Green Theme */
+    background-color: #cc0000; /* Green Theme */
     color: white;
     cursor: not-allowed;
     opacity: 0.7;
-    border: 2px solid #1e7e34;
+    border: 2px solid #db5203;
 }
 
 /* College Skills List */
@@ -712,9 +801,9 @@ button:hover {
 
 /* Skills List Items */
 .college-skills-list li {
-    background-color: #5f3ddb;
+    background-color: #28b462;
     padding: 1vh 1vw; 
-    border-radius: 0.5vw;
+    border-radius: 3vw;
     font-size: 0.8vw;
     transition: 0.3s ease;
     cursor: pointer;
@@ -738,6 +827,16 @@ button:hover {
     .college-logo {
         width: 40vw; /* Larger for mobile view */
     }
+
+    .college-skills-list {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .college-skills-list li {
+        font-size: large;
+        width: auto;
+    }
 }
 
 /* End */
@@ -746,8 +845,8 @@ button:hover {
 
 /* Testimonial Section */
 .testimonial-section {
-    margin: auto;
-    padding: auto;
+    margin: 2.5%, 2.5%;
+    padding: 2.5%, 2.5%;
     background: white;
     border-radius: 3px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -759,18 +858,13 @@ button:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     grid-template-rows: repeat(2, auto);  /* 2 rows, height auto */
-    padding: 5%;
-    gap: 5% 5%;
+    padding: 2.5%;
+    gap: 2.5% 2.5%;
+    margin: 2.5%;
     justify-content: center;
     overflow: hidden; /* Prevent scrolling */
 }
 
-/* Limit to 3 testimonials on tablets & smaller */
-@media (max-width: 768px) {
-    #testimonial-list .testimonial-box:nth-child(n+4) { 
-        display: none; 
-    }
-}
 /* Ensure all testimonials fit within the section */
 .testimonial-box {
     background: #fff;
@@ -784,7 +878,7 @@ button:hover {
     padding-right: 5%;
     gap: 5% 5%;
     align-content: center;
-
+    
 }
 
 
@@ -795,7 +889,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
+    
 }
 
 /* Quote Styling */
@@ -810,6 +904,8 @@ button:hover {
 .testimonial-author {
     font-weight: bold;
     text-align: right;
+    margin: 5%;
+    font-size: large;
 }
 
 /* No Testimonials Message */
@@ -822,7 +918,7 @@ button:hover {
 .testimonial-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 3px;
     align-items: center;
 }
 
@@ -843,9 +939,42 @@ label {
 }
 
 .testimonial-writer .testimonial-message{
+    height: auto;
+    margin: 0%;
+    padding: 0%;
     width: auto;
 }
 
 input[type="checkbox"] {
     margin-right: 5px;
+}
+
+@media (max-width: 950px) {
+    /* Limit to 3 testimonials on tablets & smaller */
+    #testimonial-list .testimonial-box:nth-child(n+4) { 
+        display: none; 
+    }
+
+    #testimonial-writer,
+    #testimonial-message {
+        width: 100%; /* Full width */
+        max-width: 500px; /* Set a max width */
+        height: 50px; /* Height for input */
+        font-size: 18px; /* Font size */
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    /* Adjusting textarea specifically */
+    #testimonial-message {
+        height: 150px; /* More height for textarea */
+        resize: vertical; /* Allow vertical resizing */
+    }
+
+    .no-testimonials{
+        font-size: larger;
+    }
+    
 }
