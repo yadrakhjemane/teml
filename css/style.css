@@ -239,31 +239,7 @@ body.page-education .left-section {
     box-shadow: 0 0vh 0vh rgba(0, 0, 0, 0.5);
 }
 
-/* Go to Top Button */
-body.page-landing .go-to-top {
-    display: none; /* Hide on the landing page */
-}
 
-.go-to-top {
-    position: fixed;
-    bottom: 5rem;
-    right: 7.5rem;
-    z-index: 1000;
-    display: none; /* Default display */
-}
-
-.go-to-top img {
-    
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    border: 0.2vw solid #222; /* Matches left section background */
-}
-
-.go-to-top img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0.4vh 0.8vh rgba(0, 0, 0, 0.5);
-}
 
 
 button {
@@ -364,18 +340,7 @@ button:hover {
         margin-bottom: 10%;
     }
 
-    /* Ensure "Go to Top" button is visible */
-    .go-to-top {
-        display: block;
-        bottom: 2rem;
-        right: 2rem;
-    }
-
-    .go-to-top img {
-        width: 10vw;
-        height: 10vw;
-    }
-
+    
 
 
     #landing {
