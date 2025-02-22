@@ -1,7 +1,4 @@
 Live hosted: https://shailkpatel.github.io/Portfolio-Website/
-
-Here is the documentation and metadata summary for your **HTML file**:  
-
 ---
 
 ### **📌 Project: Portfolio Website of SHAIL K PATEL**  
