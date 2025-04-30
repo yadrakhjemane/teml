@@ -1,6 +1,6 @@
 ### **📌 Project: Portfolio Website of SHAIL K PATEL**  
 #### **1. Metadata Summary**  
-- **Title:** SHAIL K PATEL - Portfolio  
+- **Title:** Shail K Patel  
 - **Description:** Portfolio website of SHAIL K PATEL  
 - **Viewport:** Responsive (meta tag for mobile compatibility)  
 - **Stylesheet:** External CSS (`css/style.css`)  
