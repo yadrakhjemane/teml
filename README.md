@@ -16,10 +16,7 @@
 
 - **Sidebar (Fixed on Larger Screens)**  
   - Profile picture, name, role, short motto  
-  - Navigation menu for quick access  
-
-- **About Section**  
-  - Displays introductory text and a typewriter animation effect  
+  - Navigation menu for quick access   
 
 - **Projects Section**  
   - Showcases multiple projects with a **slideshow** format  
@@ -35,10 +32,6 @@
   - Skills learned in each semester (Sem 1, Sem 2, Sem 3)  
   - Buttons to toggle between different semesters  
 
-- **Testimonial Section**  
-  - Allows visitors to submit testimonials  
-  - No testimonials yet (default message displayed)  
-
 - **JavaScript Integration**  
   - Uses `script.js` for dynamic behavior (not provided)  
   - Includes functions for theme toggle, slideshow navigation, testimonials, and skills toggle  
@@ -47,21 +40,12 @@
 
 
 ### **📌 CSS Documentation for Portfolio Website**  
-#### **1. Theme & Color Variables**  
-- **Light Mode (`:root`)**:  
-  - Background: `#ffffff`  
-  - Text Color: `#000000`  
-  - Heading Color: `#209fb6` (Cyan Blue)  
-  - Role Color: `#8f8f8f` (Gray)  
-  - Button Background: `#209fb6` (Cyan Blue)  
-  - Button Text: `#ffffff`  
-
-- **Dark Mode (`[data-theme="dark"]`)**:  
+#### **1. Theme & Color Variables:**  
   - Background: `#000000`  
   - Text Color: `#ffffff`  
   - Heading Color: `#23a7c2` (Lighter Cyan)  
   - Button Background: `#48c1d9`  
-  - Skill Section Background: `#444`  
+  - Skill Section Background: `#444`
 
 #### **2. Typography & Fonts**  
 - **Custom Fonts Used**:
@@ -134,7 +118,6 @@
 ---
 
 ### **1. Core Functionalities**  
-The JavaScript file enhances **navigation, UI animations, dark mode toggle, slideshows, and testimonials.**  
 
 #### ✅ **Page Scroll & Navigation**  
 - **Smooth Section Scrolling** (`scrollToSection(index)`)  
@@ -145,21 +128,6 @@ The JavaScript file enhances **navigation, UI animations, dark mode toggle, slid
 #### ✅ **Project Slideshow Navigation**  
 - Uses `prev-project` and `next-project` buttons to navigate projects.  
 - Disables navigation when on the first/last project.  
-
-#### ✅ **Dark Mode Toggle**  
-- Uses `localStorage` to remember the theme.  
-- Detects system preference (light/dark mode).  
-- Toggles theme when clicking `theme-toggle` button.  
-
-#### ✅ **Typewriter Effect for About Section**  
-- Cycles through multiple text lines with a delay.  
-- Mimics typewriter effect using `setTimeout()`.  
-
-#### ✅ **Testimonial Management**  
-- Stores testimonials in an **Ordered HashMap** (max 6 testimonials).  
-- Limits name to **10 characters** and testimonial message to **50 characters**.  
-- Requires email verification before adding a testimonial.  
-- Dynamically updates UI after adding a new testimonial.  
 
 ---
 
@@ -221,46 +189,6 @@ function updateProjectVisibility() {
 
 ---
 
-#### **📍 Dark Mode Toggle**  
-```js
-function setTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
-}
-```
-- **Saves dark mode setting in `localStorage`** so it persists after refresh.  
-- Automatically applies **system preference** on load.  
-
----
-
-#### **📍 Typewriter Animation**  
-```js
-const text = [
-    "Machine Learning nerd with big dreams. 🤖",
-    "B.E. AI & ML @ LJ University, Ahmedabad.",
-    "Obsessed with cutting-edge ML.",
-    "AI for social good? Count me in!",
-];
-
-let i = 0, j = 0;
-
-function typeWriter() {
-    const typewriterText = document.getElementById("typewriter-text");
-
-    if (i < text[j].length) {
-        typewriterText.textContent += text[j].charAt(i);
-        i++;
-        setTimeout(typeWriter, 40);
-    } else if (j < text.length - 1) {
-        j++; i = 0;
-        setTimeout(typeWriter, 500);
-    }
-}
-```
-- Cycles through multiple **typewriter effect messages** in the About Section.  
-
----
-
 #### **📍 Slideshow for Projects**  
 ```js
 let slideIndex = 0;
@@ -275,56 +203,3 @@ function showSlides(n) {
 - Implements a **circular slideshow** (resets to the first slide after the last).  
 
 ---
-
-#### **📍 Testimonial System (With HashMap)**  
-```js
-class OrderedHashMap {
-    constructor(maxSize) {
-        this.maxSize = maxSize;
-        this.data = [];
-    }
-
-    add(key, value) {
-        if (this.data.some(item => item.key === key)) return; // Prevent duplicates
-        if (this.data.length >= this.maxSize) this.data.pop(); // Remove oldest entry
-        this.data.unshift({ key, value });
-    }
-
-    getAll() {
-        return this.data;
-    }
-}
-```
-- **Stores testimonials with a max limit of 6.**  
-- **Removes the oldest testimonial when exceeding the limit.**  
-
----
-
-#### **📍 Adding New Testimonials (With Email Verification)**  
-```js
-function addNewTestimonial() {
-    const name = document.getElementById("testimonial-writer").value.trim();
-    const message = document.getElementById("testimonial-message").value.trim();
-
-    if (!name || !message) {
-        alert("Please enter your name and testimonial.");
-        return;
-    }
-
-    if (name.length > 10 || message.length > 50) {
-        alert("Name (max 10 chars) or Testimonial (max 50 chars) exceeded.");
-        return;
-    }
-
-    const userEmail = prompt("Enter my email to confirm your identity:");
-    if (userEmail !== "shailpatel.connect@gmail.com") {
-        alert("Email verification failed.");
-        return;
-    }
-
-    testimonialManager.add(name, message);
-    renderTestimonials();
-}
-```
-- **Prevents spam** by requiring email verification (`shailpatel.connect@gmail.com`).  
-- Limits **name to 10 characters** and **message to 50 characters**.  
