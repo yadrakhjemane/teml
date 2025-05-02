@@ -68,12 +68,20 @@
             </div>
         </div>
 
-        <!-- Bottom 30% (Button) -->
-        <div class="absolute bottom-10 left-0 w-full flex items-center justify-center z-10">
-            <a href="mailto:your.email@example.com"
-                class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl"
-                style="background-color: var(--button-bg); color: var(--button-text);">
-                Hire Me
+        <!-- Bottom 30% (Buttons) -->
+        <div class="absolute bottom-10 left-0 w-full flex items-center justify-center gap-4 z-10">
+            <a href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
+            onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
+            aria-label="Send an email to Shail to discuss hiring opportunities"
+            class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl"
+            style="background-color: var(--button-bg); color: var(--button-text);">
+            Available for Work  
+        </a>
+
+            <a href="https://www.linkedin.com/in/shail-k-patel/" target="_blank"
+                class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl border-2 border-[var(--button-bg)]"
+                style="color: var(--button-bg);">
+                Connect on LinkedIn
             </a>
         </div>
     </section>

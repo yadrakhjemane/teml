@@ -21,3 +21,19 @@ VANTA.GLOBE({
     spacing: 15.0,
     size: 0.50
 });
+
+// Handle mailto link with Gmail fallback
+function tryMailto(mailtoUrl) {
+    const emailWindow = window.open(mailtoUrl, '_blank');
+    setTimeout(() => {
+        if (!emailWindow || emailWindow.closed || typeof emailWindow.closed === 'undefined') {
+            const params = mailtoUrl.split('?')[1];
+            const subject = params.match(/subject=([^&]*)/)?.[1] || '';
+            const body = params.match(/body=([^&]*)/)?.[1] || '';
+            const to = mailtoUrl.split('?')[0].replace('mailto:', '');
+            window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+        } else {
+            emailWindow.close();
+        }
+    }, 500);
+}
