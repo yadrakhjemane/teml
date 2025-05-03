@@ -100,3 +100,17 @@ body {
         
     }
 }
+
+/* project section */
+
+/* Mobile iframe container */
+.mobile-iframe-container {
+    aspect-ratio: 16 / 9;
+    min-height: 300px;
+}
+
+/* Desktop iframe container */
+.desktop-iframe-container {
+    aspect-ratio: 16 / 9;
+    min-height: 500px;
+}
