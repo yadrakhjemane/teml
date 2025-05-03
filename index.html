@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Shail K Patel – Machine Learning Intern. Explore AI projects, research, and skills. Available for hire in ML and data science roles." />    
+    <meta
+      name="description"
+      content="Portfolio of Shail K Patel – Machine Learning Intern. Explore AI projects, research, and skills. Available for hire in ML and data science roles."
+    />
     <meta name="author" content="Shail K Patel" />
-    <meta name="keywords" content="Shail K Patel, Machine Learning, AI, Data Science, Portfolio, Projects, Research, Intern, Hire" />
+    <meta
+      name="keywords"
+      content="Shail K Patel, Machine Learning, AI, Data Science, Portfolio, Projects, Research, Intern, Hire"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#121212" />
 
     <!-- Social Sharing (Open Graph for LinkedIn, GitHub previews) -->
-    <meta property="og:title" content="Shail K Patel | Machine Learning Intern & Portfolio" />
-    <meta property="og:description" content="Machine Learning intern passionate about solving real-world problems with AI. Explore my projects, research, and skills. Let’s build the future together." />
+    <meta
+      property="og:title"
+      content="Shail K Patel | Machine Learning Intern & Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Machine Learning intern passionate about solving real-world problems with AI. Explore my projects, research, and skills. Let’s build the future together."
+    />
     <meta property="og:url" content="https://shailpatel.github.io/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://shailpatel.github.io/assets/images/picofme.png" />
+    <meta
+      property="og:image"
+      content="https://shailpatel.github.io/assets/images/picofme.png"
+    />
     <meta property="og:image:alt" content="Photo of Shail K Patel" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
     <!-- Twitter Card for Twitter Sharing -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Shail K Patel | Machine Learning Intern & Portfolio" />
-    <meta name="twitter:description" content="Machine Learning intern passionate about solving real-world problems with AI. Explore my projects, research, and skills." />
-    <meta name="twitter:image" content="https://shailpatel.github.io/assets/images/picofme.png" />
+    <meta
+      name="twitter:title"
+      content="Shail K Patel | Machine Learning Intern & Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Machine Learning intern passionate about solving real-world problems with AI. Explore my projects, research, and skills."
+    />
+    <meta
+      name="twitter:image"
+      content="https://shailpatel.github.io/assets/images/picofme.png"
+    />
     <meta name="twitter:image:alt" content="Photo of Shail K Patel" />
 
     <!-- Identity Links -->
@@ -36,7 +59,10 @@
     <title>Shail K Patel</title>
 
     <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -46,561 +72,1060 @@
 
     <!-- Favicon + Performance Preload -->
     <link rel="icon" type="image/png" href="assets/images/picofme.png" />
-    <link rel="preload" as="image" href="assets/images/picofme.png" type="image/png" />
-    <link rel="preload" as="image" href="assets/images/profile-pic.png" type="image/png" />
-</head>
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/picofme.png"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/profile-pic.png"
+      type="image/png"
+    />
+  </head>
 
-<body class="text-white snap-y snap-mandatory overflow-y-scroll h-screen scroll-snap">
-
+  <body
+    class="text-white snap-y snap-mandatory overflow-y-scroll h-screen scroll-snap"
+  >
     <!-- landing section -->
-    <section id="landing" class="snap-start h-screen w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-24 gap-12 relative overflow-hidden md:text-left">
-        <!-- Background (Top 70%) -->
-        <div id="vanta-bg" class="absolute top-0 left-0 w-full h-[70vh] z-0"></div>
+    <section
+      id="landing"
+      class="snap-start h-screen w-full flex flex-col md:flex-row items-center justify-center px-6 md:px-24 gap-12 relative overflow-hidden md:text-left"
+    >
+      <!-- Background (Top 70%) -->
+      <div
+        id="vanta-bg"
+        class="absolute top-0 left-0 w-full h-[70vh] z-0"
+      ></div>
 
-        <!-- Bottom 30% Background -->
-        <div class="absolute bottom-0 left-0 w-full h-[30vh] bg-black z-0"></div>
+      <!-- Bottom 30% Background -->
+      <div class="absolute bottom-0 left-0 w-full h-[30vh] bg-black z-0"></div>
 
-        <!-- Content (Text and Image) -->
-        <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full">
-            <div class="text-center md:text-left">
-                <h1 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight"
-                    style="font-family: 'Cabin Sketch', cursive; color: var(--heading-color);">
-                    Shail K Patel
-                </h1>
-                <p class="text-4xl sm:text-2xl lg:text-6xl mb-6 text-white" style="font-family: 'SF', sans-serif;">
-                    I help <span style="color: var(--motto-color); font-family: 'Motto', cursive; font-size: 0.875rem;">innovators</span> solve
-                    real-world problems using
-                    <span style="color: var(--motto-color); font-family: 'Motto', cursive; font-size: 0.875rem;">Machine Learning</span>.<br>
-                    Let’s collaborate and build something <span class="italic">impactful</span>.
-                </p>
-            </div>
-            <!-- Profile Image -->
-            <div class="w-72 h-72 md:w-[400px] md:h-[400px] rounded-full overflow-hidden shadow-lg border-4 border-cyan-400"
-                data-aos="zoom-in">
-                <img src="assets/images/profile-pic.png" alt="Shail K Patel" class="w-full h-full object-cover" />
-            </div>
+      <!-- Content (Text and Image) -->
+      <div
+        class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full"
+      >
+        <div
+          class="text-center md:text-left"
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          <h1
+            class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight landing-heading"
+          >
+            Shail K Patel
+          </h1>
+          <p class="text-2xl sm:text-3xl lg:text-4xl mb-6 landing-text">
+            I help <span class="motto">innovators</span> solve real-world
+            problems using <span class="motto">Machine Learning</span>.<br />
+            Let’s collaborate and build something
+            <span class="italic">impactful</span>.
+          </p>
         </div>
+        <!-- Profile Image -->
+        <div
+          class="w-72 h-72 md:w-[400px] md:h-[400px] rounded-full overflow-hidden shadow-lg border-4 border-cyan-400"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="200"
+        >
+          <img
+            src="assets/images/profile-pic.png"
+            sizes="(max-width: 768px) 288px, 400px"
+            alt="Shail K Patel, Machine Learning Intern Profile Picture"
+            class="w-full h-full object-cover"
+            loading="eager"
+          />
+        </div>
+      </div>
 
-        <!-- Bottom 30% (Buttons) -->
-        <div class="absolute bottom-10 left-0 w-full flex items-center justify-center gap-4 z-10">
-            <a href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
-            onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
-            aria-label="Send an email to Shail to discuss hiring opportunities"
-            class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl"
-            style="background-color: var(--button-bg); color: var(--button-text);">
-            Available for Work  
+      <!-- Bottom 30% (Buttons) -->
+      <div
+        class="absolute bottom-10 left-0 w-full flex items-center justify-center gap-4 z-10"
+      >
+        <a
+          href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
+          onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
+          aria-label="Send an email to Shail to discuss hiring opportunities"
+          class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl"
+          style="background-color: var(--button-bg); color: var(--button-text)"
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          Available for Work
         </a>
 
-            <a href="https://www.linkedin.com/in/shail-k-patel/" target="_blank"
-                class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl border-2 border-[var(--button-bg)]"
-                style="color: var(--button-bg);">
-                Connect on LinkedIn
-            </a>
-        </div>
+        <a
+          href="https://www.linkedin.com/in/shail-k-patel/"
+          target="_blank"
+          class="inline-block px-8 py-4 rounded-xl text-lg font-semibold transition-all shadow-xl border-2 border-[var(--button-bg)]"
+          style="color: var(--button-bg)"
+          data-aos="fade-right"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          Connect on LinkedIn
+        </a>
+      </div>
     </section>
 
     <!-- Project section -->
-    <section id="projects" class="snap-start min-h-screen w-full flex flex-col items-center justify-start px-6 md:px-24 pt-12 bg-[#121212] text-white overflow-y-auto">
-        <h2 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center" style="font-family: 'Cabin Sketch', cursive; color: var(--heading-color);">
-            My Projects
-        </h2>
-    
-        <div class="w-full max-w-5xl flex flex-col gap-12 pb-12">
-            <!-- Project 1: Beyond The Marks -->
-            <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-                <h3 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'SF', sans-serif;">
-                    Beyond The Marks
-                    <span class="text-gray-400 text-2xl md:text-3xl ml-2">Mar 2025</span>
-                </h3>
-                <ul class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6" style="font-family: 'SF', sans-serif;">
-                    <li>Developed an ML pipeline with explainable AI (SHAP) to analyze student performance, detect grading bias, and assess the influence of sensitive attributes (e.g., gender, religion).</li>
-                    <li>Quantified teacher effectiveness and engineered performance indicators (e.g., attendance trends, average marks) to evaluate learning outcomes.</li>
-                    <li>Used statistical methods (e.g., correlation analysis, one-hot encoding) to explore relationships among attendance, grades, and categorical student features.</li>
-                    <li><strong>Technologies:</strong> Python, Pandas, NumPy, SHAP, Scikit-learn, Matplotlib/Seaborn.</li>
-                </ul>
-                
-                <!-- Responsive iframe container -->
-                <div class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6">
-                    <div class="block md:hidden" style="aspect-ratio: 9 / 16; min-height: 500px;">
-                        <!-- Mobile view -->
-                        <iframe src="https://beyondthemarks.streamlit.app/?embed=true"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allowfullscreen
-                                title="Beyond The Marks Demo"></iframe>
-                    </div>
-                    <div class="hidden md:block" style="aspect-ratio: 16 / 9; min-height: 500px;">
-                        <!-- PC/Desktop view -->
-                        <iframe src="https://beyondthemarks.streamlit.app/?embed=true"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allowfullscreen
-                                title="Beyond The Marks Demo"></iframe>
-                    </div>
-                </div>
+    <section
+      id="projects"
+      class="snap-start min-h-screen w-full flex flex-col items-center justify-start px-6 md:px-24 pt-12 bg-[#121212] text-white overflow-y-auto"
+    >
+      <h2
+        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center"
+        style="
+          font-family: 'Cabin Sketch', cursive;
+          color: var(--heading-color);
+        "
+      >
+        My Projects
+      </h2>
 
-                <a href="https://beyondthemarks.streamlit.app/" target="_blank"
-                class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block"
-                style="font-family: 'SF', sans-serif;">
-                    Try It Live
-                </a>
+      <div class="w-full max-w-5xl flex flex-col gap-12 pb-12">
+        <!-- Project 1: Beyond The Marks -->
+        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
+          <h3
+            class="text-4xl md:text-5xl font-bold mb-4"
+            style="font-family: 'SF', sans-serif"
+          >
+            Beyond The Marks
+            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
+              >Mar 2025</span
+            >
+          </h3>
+          <ul
+            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6"
+            style="font-family: 'SF', sans-serif"
+          >
+            <li>
+              Developed an ML pipeline with explainable AI (SHAP) to analyze
+              student performance, detect grading bias, and assess the influence
+              of sensitive attributes (e.g., gender, religion).
+            </li>
+            <li>
+              Quantified teacher effectiveness and engineered performance
+              indicators (e.g., attendance trends, average marks) to evaluate
+              learning outcomes.
+            </li>
+            <li>
+              Used statistical methods (e.g., correlation analysis, one-hot
+              encoding) to explore relationships among attendance, grades, and
+              categorical student features.
+            </li>
+            <li>
+              <strong>Technologies:</strong> Python, Pandas, NumPy, SHAP,
+              Scikit-learn, Matplotlib/Seaborn.
+            </li>
+          </ul>
+
+          <!-- Responsive iframe container -->
+          <div
+            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
+          >
+            <div
+              class="block md:hidden"
+              style="aspect-ratio: 9 / 16; min-height: 500px"
+            >
+              <!-- Mobile view -->
+              <iframe
+                src="https://beyondthemarks.streamlit.app/?embed=true"
+                class="w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                title="Beyond The Marks Demo"
+              ></iframe>
             </div>
-
-
-    
-            <!-- Project 2: Attend2Achieve -->
-            <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-                <h3 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'SF', sans-serif;">
-                    Attend2Achieve
-                    <span class="text-gray-400 text-2xl md:text-3xl ml-2">Mar 2025</span>
-                </h3>
-                <ul class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6" style="font-family: 'SF', sans-serif;">
-                    <li>Analyzed subject attendance and marks (theory + practical) to find correlations.</li>
-                    <li>Explained performance patterns using statistical measures and visualized data with plots and heatmaps.</li>
-                    <li>Proposed subject-specific improvements and presented an overall academic insights dashboard.</li>
-                    <li><strong>Technologies:</strong> Python, Pandas, NumPy, Matplotlib, Seaborn, Streamlit.</li>
-                </ul>
-                
-                <!-- Responsive iframe container -->
-                <div class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6">
-                    <div class="block md:hidden" style="aspect-ratio: 9 / 16; min-height: 500px;">
-                        <!-- Mobile view -->
-                        <iframe src="https://attend2achieve.streamlit.app/?embed=true"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allowfullscreen
-                                title="Attend2Achieve Demo"></iframe>
-                    </div>
-                    <div class="hidden md:block" style="aspect-ratio: 16 / 9; min-height: 500px;">
-                        <!-- PC/Desktop view -->
-                        <iframe src="https://attend2achieve.streamlit.app/?embed=true"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allowfullscreen
-                                title="Attend2Achieve Demo"></iframe>
-                    </div>
-                </div>
-
-                <a href="https://attend2achieve.streamlit.app/" target="_blank"
-                class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block"
-                style="font-family: 'SF', sans-serif;">
-                    Try It Live
-                </a>
+            <div
+              class="hidden md:block"
+              style="aspect-ratio: 16 / 9; min-height: 500px"
+            >
+              <!-- PC/Desktop view -->
+              <iframe
+                src="https://beyondthemarks.streamlit.app/?embed=true"
+                class="w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                title="Beyond The Marks Demo"
+              ></iframe>
             </div>
+          </div>
 
-    
-            <!-- Project 3: The Profit Oracle -->
-            <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-                <h3 class="text-4xl md:text-5xl font-bold mb-4" style="font-family: 'SF', sans-serif;">
-                    The Profit Oracle
-                    <span class="text-gray-400 text-2xl md:text-3xl ml-2">Feb 2025</span>
-                </h3>
-                <ul class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6" style="font-family: 'SF', sans-serif;">
-                    <li>Developed a Python/ML Streamlit tool for financial analysis and revenue forecasting.</li>
-                    <li>Automated insights on returns, repeat customers, and location-based behavior.</li>
-                    <li>Compared costs vs. prices, and analyzed profit/sales by product and location using ML.</li>
-                    <li><strong>Technologies:</strong> Python, Pandas, NumPy, Scikit-learn, Streamlit, Matplotlib.</li>
-                </ul>
-
-                <!-- Responsive iframe container -->
-                <div class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6">
-                    <div class="block md:hidden" style="aspect-ratio: 9 / 16; min-height: 500px;">
-                        <!-- Mobile view -->
-                        <iframe src="https://theprofitoracle.streamlit.app/?embed=true"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allowfullscreen
-                                title="The Profit Oracle Demo"></iframe>
-                    </div>
-                    <div class="hidden md:block" style="aspect-ratio: 16 / 9; min-height: 500px;">
-                        <!-- Desktop view -->
-                        <iframe src="https://theprofitoracle.streamlit.app/?embed=true"
-                                class="w-full h-full"
-                                frameborder="0"
-                                allowfullscreen
-                                title="The Profit Oracle Demo"></iframe>
-                    </div>
-            </div>
-
-            <a href="https://theprofitoracle.streamlit.app/" target="_blank"
-                class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block"
-                style="font-family: 'SF', sans-serif;">
-                Try It Live
-            </a>
+          <a
+            href="https://beyondthemarks.streamlit.app/"
+            target="_blank"
+            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block"
+            style="font-family: 'SF', sans-serif"
+          >
+            Try It Live
+          </a>
         </div>
 
+        <!-- Project 2: Attend2Achieve -->
+        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
+          <h3
+            class="text-4xl md:text-5xl font-bold mb-4"
+            style="font-family: 'SF', sans-serif"
+          >
+            Attend2Achieve
+            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
+              >Mar 2025</span
+            >
+          </h3>
+          <ul
+            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6"
+            style="font-family: 'SF', sans-serif"
+          >
+            <li>
+              Analyzed subject attendance and marks (theory + practical) to find
+              correlations.
+            </li>
+            <li>
+              Explained performance patterns using statistical measures and
+              visualized data with plots and heatmaps.
+            </li>
+            <li>
+              Proposed subject-specific improvements and presented an overall
+              academic insights dashboard.
+            </li>
+            <li>
+              <strong>Technologies:</strong> Python, Pandas, NumPy, Matplotlib,
+              Seaborn, Streamlit.
+            </li>
+          </ul>
+
+          <!-- Responsive iframe container -->
+          <div
+            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
+          >
+            <div
+              class="block md:hidden"
+              style="aspect-ratio: 9 / 16; min-height: 500px"
+            >
+              <!-- Mobile view -->
+              <div>
+                <iframe
+                  src="https://attend2achieve.streamlit.app/?embed=true"
+                  class="w-full h-full"
+                  frameborder="0"
+                  allowfullscreen
+                  title="Attend2Achieve Demo"
+                ></iframe>
+              </div>
+              <div
+                class="hidden md:block"
+                style="aspect-ratio: 16 / 9; min-height: 500px"
+              >
+                <!-- PC/Desktop view -->
+                <iframe
+                  src="https://attend2achieve.streamlit.app/?embed=true"
+                  class="w-full h-full"
+                  frameborder="0"
+                  allowfullscreen
+                  title="Attend2Achieve Demo"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <a
+            href="https://attend2achieve.streamlit.app/"
+            target="_blank"
+            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block"
+            style="font-family: 'SF', sans-serif"
+          >
+            Try It Live
+          </a>
         </div>
+
+        <!-- Project 3: The Profit Oracle -->
+        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
+          <h3
+            class="text-4xl md:text-5xl font-bold mb-4"
+            style="font-family: 'SF', sans-serif"
+          >
+            The Profit Oracle
+            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
+              >Feb 2025</span
+            >
+          </h3>
+          <ul
+            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6"
+            style="font-family: 'SF', sans-serif"
+          >
+            <li>
+              Developed a Python/ML Streamlit tool for financial analysis and
+              revenue forecasting.
+            </li>
+            <li>
+              Automated insights on returns, repeat customers, and
+              location-based behavior.
+            </li>
+            <li>
+              Compared costs vs. prices, and analyzed profit/sales by product
+              and location using ML.
+            </li>
+            <li>
+              <strong>Technologies:</strong> Python, Pandas, NumPy,
+              Scikit-learn, Streamlit, Matplotlib.
+            </li>
+          </ul>
+
+          <!-- Responsive iframe container -->
+          <div
+            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
+          >
+            <div
+              class="block md:hidden"
+              style="aspect-ratio: 9 / 16; min-height: 500px"
+            >
+              <!-- Mobile view -->
+              <iframe
+                src="https://theprofitoracle.streamlit.app/?embed=true"
+                class="w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                title="The Profit Oracle Demo"
+              ></iframe>
+            </div>
+            <div
+              class="hidden md:block"
+              style="aspect-ratio: 16 / 9; min-height: 500px"
+            >
+              <!-- Desktop view -->
+              <iframe
+                src="https://theprofitoracle.streamlit.app/?embed=true"
+                class="w-full h-full"
+                frameborder="0"
+                allowfullscreen
+                title="The Profit Oracle Demo"
+              ></iframe>
+            </div>
+          </div>
+
+          <a
+            href="https://theprofitoracle.streamlit.app/"
+            target="_blank"
+            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block"
+            style="font-family: 'SF', sans-serif"
+          >
+            Try It Live
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- research section -->
-    <section id="research" class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white">
-        <h2 class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center" style="font-family: 'Cabin Sketch', cursive; color: var(--heading-color);">
-            Research
-        </h2>
-    
-        <div class="w-full max-w-5xl flex flex-col items-center gap-6">
-            <h3 class="text-2xl md:text-3xl font-bold text-center" style="font-family: 'SF', sans-serif;">
-                Comparative Analysis of Bias Detection Methods for Educational Datasets: Evaluating Performance Across Diverse Bias Types
-            </h3>
-            <div class="w-full max-w-[450px] relative" style="padding-bottom: 17.78%;">
-                <div class="absolute inset-0 bg-white flex items-center justify-center rounded-lg shadow-lg border border-gray-200">
-                    <p class="text-2xl md:text-3xl font-semibold text-black" style="font-family: 'SF', sans-serif;">
-                        Coming Soon
-                    </p>
-                </div>
-            </div>
+    <section
+      id="research"
+      class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white"
+    >
+      <h2
+        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center"
+        style="
+          font-family: 'Cabin Sketch', cursive;
+          color: var(--heading-color);
+        "
+      >
+        Research
+      </h2>
+
+      <div class="w-full max-w-5xl flex flex-col items-center gap-6">
+        <h3
+          class="text-2xl md:text-3xl font-bold text-center"
+          style="font-family: 'SF', sans-serif"
+        >
+          Comparative Analysis of Bias Detection Methods for Educational
+          Datasets: Evaluating Performance Across Diverse Bias Types
+        </h3>
+        <div
+          class="w-full max-w-[450px] relative"
+          style="padding-bottom: 17.78%"
+        >
+          <div
+            class="absolute inset-0 bg-white flex items-center justify-center rounded-lg shadow-lg border border-gray-200"
+          >
+            <p
+              class="text-2xl md:text-3xl font-semibold text-black"
+              style="font-family: 'SF', sans-serif"
+            >
+              Coming Soon
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- skill section -->
-    <section id="skills" class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white">
-        <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-center" style="font-family: 'Cabin Sketch', cursive; color: var(--heading-color);">
-            Skills
-        </h2>
-    
-        <div class="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-12">
-            <!-- Skill 1: Supervised Machine Learning -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <!-- removed rounded-full from img class -->
-                    <img src="assets/images/logo/supervised_learning.png" alt="Supervised Machine Learning"
-                         class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 70%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Supervised Machine Learning
-                </span>
-            </div>
-    
-            <!-- Skill 2: Unsupervised Machine Learning -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="150">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                                        <!-- removed rounded-full from img class -->
+    <section
+      id="skills"
+      class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white"
+    >
+      <h2
+        class="text-4xl md:text-5xl font-extrabold mb-12 text-center"
+        style="
+          font-family: 'Cabin Sketch', cursive;
+          color: var(--heading-color);
+        "
+      >
+        Skills
+      </h2>
 
-                    <img src="assets/images/logo/unsupervised_learning.png" alt="Unsupervised Machine Learning"
-                         class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 68%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Unsupervised Machine Learning
-                </span>
-            </div>
-    
-            <!-- Skill 3: Reinforcement Learning -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 65) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                                        <!-- removed rounded-full from img class -->
-
-                    <img src="assets/images/logo/reinforcement_learning.png" alt="Reinforcement Learning"
-                         class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 65%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Reinforcement Learning
-                </span>
-            </div>
-    
-            <!-- Skill 4: Deep Learning -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="250">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 80) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/deep_learning.png" alt="Deep Learning"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 80%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Deep Learning
-                </span>
-            </div>
-    
-            <!-- Skill 5: Neural Networks -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="300">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 75) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/neural_networks.png" alt="Neural Networks"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 75%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Neural Networks
-                </span>
-            </div>
-    
-            <!-- Skill 6: TensorFlow -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="350">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 60) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/TensorFlow.png" alt="TensorFlow"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 60%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    TensorFlow
-                </span>
-            </div>
-    
-            <!-- Skill 7: Scikit-Learn -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="400">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/scikit-learn.png" alt="Scikit-Learn"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 70%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Scikit-Learn
-                </span>
-            </div>
-    
-            <!-- Skill 8: Streamlit -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="450">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/streamlit.png" alt="Streamlit"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 68%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Streamlit
-                </span>
-            </div>
-    
-            <!-- Skill 9: MERN -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="500">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/MERN.png" alt="MERN"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 70%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    MERN
-                </span>
-            </div>
-    
-            <!-- Skill 10: Bootstrap -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="550">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 65) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/bootstrap.png" alt="Bootstrap"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 65%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Bootstrap
-                </span>
-            </div>
-    
-            <!-- Skill 11: Tailwind -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="600">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/Tailwind.png" alt="Tailwind"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 68%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Tailwind
-                </span>
-            </div>
-    
-            <!-- Skill 12: EcmaScript -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="650">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 75) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/ecmascript.png" alt="EcmaScript"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 75%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    EcmaScript
-                </span>
-            </div>
-    
-            <!-- Skill 13: MySQL -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="700">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <!-- removed rounded-full from img class -->
-                    <img src="assets/images/logo/mysql.png" alt="MySQL"
-                         class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 70%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    MySQL
-                </span>
-            </div>
-    
-            <!-- Skill 14: PostgreSQL -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="750">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/postgressql.png" alt="PostgreSQL"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 68%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    PostgreSQL
-                </span>
-            </div>
-    
-            <!-- Skill 15: Java -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="800">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 65) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/java.png" alt="Java"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 65%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Java
-                </span>
-            </div>
-    
-            <!-- Skill 16: Git -->
-            <div class="relative flex flex-col items-center group" data-aos="fade-up" data-aos-delay="850">
-                <div class="relative w-24 h-24 md:w-32 md:h-32">
-                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="47" fill="none" stroke="var(--heading-color)" stroke-width="6"
-                                stroke-dasharray="295" stroke-dashoffset="calc(295 - (295 * 75) / 100)"
-                                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
-                    </svg>
-                    <img src="assets/images/logo/git.png" alt="Git"
-                         class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"/>
-                    <p class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                       style="font-family: 'SF', sans-serif;">
-                        Proficiency: 75%
-                    </p>
-                </div>
-                <span class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      style="font-family: 'SF', sans-serif;">
-                    Git
-                </span>
-            </div>
+      <div
+        class="w-full max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-12"
+      >
+        <!-- Skill 1: Supervised Machine Learning -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <!-- removed rounded-full from img class -->
+            <img
+              src="assets/images/logo/supervised_learning.png"
+              alt="Supervised Machine Learning"
+              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 70%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Supervised Machine Learning
+          </span>
         </div>
+
+        <!-- Skill 2: Unsupervised Machine Learning -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="150"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <!-- removed rounded-full from img class -->
+
+            <img
+              src="assets/images/logo/unsupervised_learning.png"
+              alt="Unsupervised Machine Learning"
+              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 68%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Unsupervised Machine Learning
+          </span>
+        </div>
+
+        <!-- Skill 3: Reinforcement Learning -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 65) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <!-- removed rounded-full from img class -->
+
+            <img
+              src="assets/images/logo/reinforcement_learning.png"
+              alt="Reinforcement Learning"
+              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 65%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Reinforcement Learning
+          </span>
+        </div>
+
+        <!-- Skill 4: Deep Learning -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="250"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 80) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/deep_learning.png"
+              alt="Deep Learning"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 80%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Deep Learning
+          </span>
+        </div>
+
+        <!-- Skill 5: Neural Networks -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 75) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/neural_networks.png"
+              alt="Neural Networks"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 75%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Neural Networks
+          </span>
+        </div>
+
+        <!-- Skill 6: TensorFlow -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="350"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 60) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/TensorFlow.png"
+              alt="TensorFlow"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 60%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            TensorFlow
+          </span>
+        </div>
+
+        <!-- Skill 7: Scikit-Learn -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/scikit-learn.png"
+              alt="Scikit-Learn"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 70%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Scikit-Learn
+          </span>
+        </div>
+
+        <!-- Skill 8: Streamlit -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="450"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/streamlit.png"
+              alt="Streamlit"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 68%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Streamlit
+          </span>
+        </div>
+
+        <!-- Skill 9: MERN -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/MERN.png"
+              alt="MERN"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 70%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            MERN
+          </span>
+        </div>
+
+        <!-- Skill 10: Bootstrap -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="550"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 65) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/bootstrap.png"
+              alt="Bootstrap"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 65%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Bootstrap
+          </span>
+        </div>
+
+        <!-- Skill 11: Tailwind -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/Tailwind.png"
+              alt="Tailwind"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 68%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Tailwind
+          </span>
+        </div>
+
+        <!-- Skill 12: EcmaScript -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="650"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 75) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/ecmascript.png"
+              alt="EcmaScript"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 75%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            EcmaScript
+          </span>
+        </div>
+
+        <!-- Skill 13: MySQL -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="700"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <!-- removed rounded-full from img class -->
+            <img
+              src="assets/images/logo/mysql.png"
+              alt="MySQL"
+              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 70%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            MySQL
+          </span>
+        </div>
+
+        <!-- Skill 14: PostgreSQL -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="750"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/postgressql.png"
+              alt="PostgreSQL"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 68%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            PostgreSQL
+          </span>
+        </div>
+
+        <!-- Skill 15: Java -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="800"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 65) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/java.png"
+              alt="Java"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 65%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Java
+          </span>
+        </div>
+
+        <!-- Skill 16: Git -->
+        <div
+          class="relative flex flex-col items-center group"
+          data-aos="fade-up"
+          data-aos-delay="850"
+        >
+          <div class="relative w-24 h-24 md:w-32 md:h-32">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <circle
+                cx="50"
+                cy="50"
+                r="47"
+                fill="none"
+                stroke="var(--heading-color)"
+                stroke-width="6"
+                stroke-dasharray="295"
+                stroke-dashoffset="calc(295 - (295 * 75) / 100)"
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              />
+            </svg>
+            <img
+              src="assets/images/logo/git.png"
+              alt="Git"
+              class="w-full h-full object-contain rounded-full transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
+            />
+            <p
+              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="font-family: 'SF', sans-serif"
+            >
+              Proficiency: 75%
+            </p>
+          </div>
+          <span
+            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            style="font-family: 'SF', sans-serif"
+          >
+            Git
+          </span>
+        </div>
+      </div>
     </section>
 
     <!-- Scripts for AOS + Vanta -->
@@ -608,5 +1133,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

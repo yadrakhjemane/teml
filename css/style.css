@@ -39,10 +39,6 @@ body {
     background-color: var(--bg-color);
 }
 
-/* vanta bg */
-#vanta-bg {
-    background-color: var(--bg-color); /* fallback before JS kicks in */
-}
 
 /* Hidden scroll bar */
 /* For Webkit browsers (Chrome, Safari, Edge) */
@@ -57,4 +53,50 @@ body {
 /* For Firefox */
 body {
     scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+
+/* landing section */
+
+/* Landing heading */
+.landing-heading {
+    font-family: 'Cabin Sketch', cursive;
+    color: var(--heading-color);
+}
+
+/* Vanta background */
+#vanta-bg {
+    background-color: var(--bg-color); /* Fallback before JS kicks in */
+}
+
+/* Style for the landing paragraph */
+.landing-text {
+    font-family: 'SF', sans-serif;
+    /* Remove fixed font-size to let Tailwind classes handle responsive sizing */
+    font-size: 4rem; /* Default size as in your original inline style */
+
+}
+
+/* Style for the motto spans (innovators, Machine Learning) */
+.motto {
+    color: var(--motto-color);
+    font-family: 'Motto', cursive;
+    font-size: 2rem; /* Default size as in your original inline style */
+}
+
+/* Mobile adjustments (screens < 640px, aligning with Tailwind's 'sm' breakpoint) */
+@media (max-width: 639px) {
+    /* Reduce the heading size slightly on mobile */
+    .landing-heading {
+        font-size: 3rem; /* Override Tailwind's text-6xl (3.75rem) to 3rem (48px) */
+    }
+
+    /* Reduce the motto spans size slightly on mobile */
+    .motto {
+        font-size: 0.75rem; /* Reduce to 0.75rem (12px) */
+    }
+    .landing-text{
+        font-size: 2rem; /* Reduce to 2rem (12px) */
+        
+    }
 }
