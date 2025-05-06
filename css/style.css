@@ -15,6 +15,7 @@
 }
 
 /* Fonts */
+
 @font-face {
     font-family: 'Cabin Sketch';
     src: url('../assets/fonts/cabinsketch/CabinSketch-Bold.otf') format('opentype');
@@ -77,12 +78,16 @@ body {
 }
 
 /* Landing title */
-#landing-title {
-    display: inline-block; /* Makes the element shrink to fit its content */
-    background-color: var(--border-color); /* Apply background color */
-    padding: 0.2em 0.5em; /* Add extra space around the text on X and Y axes */
-    border-radius: 0.5em; /* Rounded corners */
+/* only visible in mobile screens */
+@media (max-width: 768px) {
+    #landing-title {
+        display: inline-block; /* Makes the element shrink to fit its content */
+        background-color: var(--border-color); /* Apply background color */
+        padding: 0.2em 0.5em; /* Add extra space around the text on X and Y axes */
+        border-radius: 0.5em; /* Rounded corners */
+    }
 }
+
 
 /* Highlight text when selected */
 ::selection {
