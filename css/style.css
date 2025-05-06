@@ -1,20 +1,20 @@
-/* Light Mode */
+/* Global Variables */
 :root {
-    --bg-color: #0c0c28;
+    --bg-color: #0c0c28; /* Dark mode background */
     --text-color: #ffffff;
     --heading-color: #23a7c2; /* Lighter cyan */
     --title-color: #ffffff;
     --motto-color: #0068a5;
     --role-color: #b0b0b0;
     --subtle-bg: #2e2e2e; /* Dark grey */
-    --border-color: #333333;
+    --border-color: #000000;
     --button-bg: #48c1d9;
     --button-text: #121212;
-    --skill: #444;
+    --highlight-color: #ffeb3b; /* Define the highlight color */
+    --highlight-text-color: #000; /* Text color for the highlight */
 }
 
 /* Fonts */
-
 @font-face {
     font-family: 'Cabin Sketch';
     src: url('../assets/fonts/cabinsketch/CabinSketch-Bold.otf') format('opentype');
@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: 'SF';
-    src: url('../assets/fonts/girls-have-many-secrets/Girls\ Have\ Many\ Secrets.ttf') format('opentype');
+    src: url('../assets/fonts/girls-have-many-secrets/Girls-Have-Many-Secrets.ttf') format('opentype');
 }
 
 @font-face {
@@ -32,31 +32,27 @@
 
 @font-face {
     font-family: 'Motto';
-    src: url('../assets/fonts/shadded-south/Shadded\ South\ Personal\ Use.ttf') format('opentype');
+    src: url('../assets/fonts/shadded-south/Shadded-South-Personal-Use.ttf') format('opentype');
 }
 
+/* Body */
 body {
     background-color: var(--bg-color);
+    overflow-y: scroll; /* Keeps vertical scroll functionality */
+    margin: 0; /* Reset default margins */
+    font-family: Arial, sans-serif; /* Fallback for overall text */
 }
 
-
-/* Hidden scroll bar */
-/* For Webkit browsers (Chrome, Safari, Edge) */
-body {
-    overflow: scroll; /* Keeps the scroll functionality */
-}
-
+/* Hide Scrollbars */
 ::-webkit-scrollbar {
     display: none; /* Hides scrollbar in Webkit browsers */
 }
 
-/* For Firefox */
 body {
     scrollbar-width: none; /* Hides scrollbar in Firefox */
 }
 
-
-/* landing section */
+/* Landing Section */
 
 /* Landing heading */
 .landing-heading {
@@ -69,20 +65,27 @@ body {
     background-color: var(--bg-color); /* Fallback before JS kicks in */
 }
 
-/* Style for the landing paragraph */
+/* Landing paragraph */
 .landing-text {
     font-family: 'SF', sans-serif;
-
 }
 
-/* Style for the motto spans (innovators, Machine Learning) */
+/* Motto styling */
 .motto {
     color: var(--motto-color);
     font-family: 'Motto', cursive;
 }
 
+/* Landing title */
+#landing-title {
+    display: inline-block; /* Makes the element shrink to fit its content */
+    background-color: var(--border-color); /* Apply background color */
+    padding: 0.2em 0.5em; /* Add extra space around the text on X and Y axes */
+    border-radius: 0.5em; /* Rounded corners */
+}
 
-
-
-
-/* skill section */
+/* Highlight text when selected */
+::selection {
+    background-color: var(--highlight-color); /* Use the highlight color */
+    color: var(--highlight-text-color); /* Text color for better contrast */
+}
