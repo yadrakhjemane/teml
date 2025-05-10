@@ -22,17 +22,6 @@ VANTA.GLOBE({
     size: 0.50
 });
 
-VANTA.TRUNK({
-    el: "#vanta-trunk",
-    mouseControls: true,
-    touchControls: true,
-    gyroControls: false,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    backgroundColor: 0x1B263B,
-    color: 0x23a7c2
-});
-
 
 // Handle mailto link with Gmail fallback
 function tryMailto(mailtoUrl) {
