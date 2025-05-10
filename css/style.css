@@ -94,3 +94,34 @@ body {
     background-color: var(--highlight-color); /* Use the highlight color */
     color: var(--highlight-text-color); /* Text color for better contrast */
 }
+
+
+/* project section */
+/* Enforce 16:9 aspect ratio for iframe containers */
+.mobile-iframe-container,
+.desktop-iframe-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 16:9 aspect ratio using padding-bottom (9/16 = 56.25%) */
+.mobile-iframe-container {
+  padding-bottom: 56.25%;
+  height: 400px;
+}
+
+.desktop-iframe-container {
+  padding-bottom: 56.25%;
+  height: 500px;
+}
+
+/* Ensure iframes fill the container while maintaining aspect ratio */
+.mobile-iframe-container iframe,
+.desktop-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
