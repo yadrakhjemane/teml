@@ -104,7 +104,7 @@
 
   <!-- Content (Text and Image) -->
   <div
-    class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full pt-12 md:pt-0"
+    class="relative top-10 z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full pt-12 md:pt-0"
   >
     <div
       class="text-center md:text-left"
@@ -143,23 +143,25 @@
 
   <!-- Bottom 30% (Buttons) -->
   <div
-  class="absolute bottom-10 md:bottom-20 left-0 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-4 z-10 px-4 md:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-4"
+  class="absolute bottom-12 md:bottom-20 left-0 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-4 z-10 px-4 md:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-4"
 >
-  <a
-    href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
-    onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
-    aria-label="Send an email to Shail to discuss hiring opportunities"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl border-2 border-[var(--button-bg)]"
-    style="color: var(--button-bg)"
-  >
-    Hire Me
-  </a>
+<a
+  href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
+  onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
+  aria-label="Send an email to Shail to discuss hiring opportunities"
+  class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+  data-tilt
+  style="border-color: white;"
+>
+  Hire Me
+</a>
+
 
   <a
     href="https://www.linkedin.com/in/shail-k-patel/"
     target="_blank"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl"
-    style="background-color: var(--button-bg); color: var(--button-text)"
+    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+    data-tilt
   >
     LinkedIn
   </a>
@@ -167,8 +169,8 @@
   <a
     href="http://github.com/ShailKPatel"
     target="_blank"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl"
-    style="background-color: var(--button-bg); color: var(--button-text)"
+    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+    data-tilt
   >
     GitHub
   </a>
@@ -176,12 +178,13 @@
   <a
     href="assets/pdf/Shail Resume.pdf"
     target="_blank"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl"
-    style="background-color: var(--button-bg); color: var(--button-text)"
+    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+    data-tilt
   >
     Resume
   </a>
 </div>
+
 
 
 
@@ -1127,11 +1130,13 @@
       </div>
     </section>
 
-    <!-- Scripts for AOS + Vanta -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
-    <script src="js/main.js"></script>
+<!-- Scripts for AOS + Vanta -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
+
   </body>
 </html>
