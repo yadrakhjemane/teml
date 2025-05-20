@@ -1,17 +1,29 @@
 /* Global Variables */
 :root {
-    --bg-color: #0c0c28; /* Dark mode background */
-    --text-color: #ffffff; /* Default text color */
-    --heading-color: #23a7c2; /* Lighter cyan for headings */
-    --title-color: #ffffff; /* Title text color */
-    --motto-color: #0068a5; /* Motto text color */
-    --role-color: #b0b0b0; /* Subtle role text color */
-    --subtle-bg: #2e2e2e; /* Dark grey for subtle backgrounds */
-    --border-color: #000000; /* Border color */
-    --button-bg: #48c1d9; /* Button background color */
-    --button-text: #121212; /* Button text color */
-    --highlight-color: #ffeb3b; /* Highlight background color */
-    --highlight-text-color: #000; /* Highlight text color */
+    --bg-color: #0c0c28;
+    /* Background */
+    --text-color: #ffffff;
+    /* Default text color */
+    --heading-color: #23a7c2;
+    /* Lighter cyan for headings */
+    --title-color: #ffffff;
+    /* Title text color */
+    --motto-color: #0068a5;
+    /* Motto text color */
+    --role-color: #b0b0b0;
+    /* Subtle role text color */
+    --subtle-bg: #2e2e2e;
+    /* Dark grey for subtle backgrounds */
+    --border-color: #000000;
+    /* Border color */
+    --button-bg: #48c1d9;
+    /* Button background color */
+    --button-text: #121212;
+    /* Button text color */
+    --highlight-color: #ffeb3b;
+    /* Highlight background color */
+    --highlight-text-color: #000;
+    /* Highlight text color */
 }
 
 /* Fonts */
@@ -37,86 +49,134 @@
 
 /* Body Styling */
 body {
-    background-color: var(--bg-color); /* Set background color */
-    overflow-y: scroll; /* Enable vertical scrolling */
-    margin: 0; /* Remove default margins */
-    font-family: Arial, sans-serif; /* Fallback font */
+    background-color: var(--bg-color);
+    /* Set background color */
+    overflow-y: scroll;
+    /* Enable vertical scrolling */
+    margin: 0;
+    /* Remove default margins */
+    font-family: Arial, sans-serif;
+    /* Fallback font */
 }
 
 /* Hide Scrollbars */
 ::-webkit-scrollbar {
-    display: none; /* Hide scrollbar in Webkit browsers */
+    display: none;
+    /* Hide scrollbar in Webkit browsers */
 }
 
 body {
-    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    scrollbar-width: none;
+    /* Hide scrollbar in Firefox */
 }
+
+.section-header {
+    font-family: 'Cabin Sketch', cursive !important; 
+    color: var(--heading-color);
+}
+
+.padding-b {
+    padding-bottom: 17.78% !important;
+}
+
+/* Highlight text when selected */
+::selection {
+    background-color: var(--highlight-color);
+    /* Highlight background */
+    color: var(--highlight-text-color);
+    /* Highlight text color */
+}
+
 
 /* Landing Section */
 
 /* Landing heading styling */
 .landing-heading {
-    font-family: 'Cabin Sketch', cursive; /* Custom font for headings */
-    color: var(--heading-color); /* Heading color */
+    font-family: 'Cabin Sketch', cursive;
+    /* Custom font for headings */
+    color: var(--heading-color);
+    /* Heading color */
 }
 
 /* Vanta background fallback */
 #vanta-bg {
-    background-color: var(--bg-color); /* Fallback color before JS loads */
+    background-color: var(--bg-color);
+    /* Fallback color before JS loads */
 }
 
 /* Landing paragraph styling */
 .landing-text {
-    font-family: 'SF', sans-serif; /* Custom font for landing text */
+    font-family: 'SF', sans-serif;
+    /* Custom font for landing text */
 }
 
 /* Motto styling */
 .motto {
-    color: var(--motto-color); /* Motto text color */
-    font-family: 'Motto', cursive; /* Custom font for motto */
+    color: var(--motto-color);
+    /* Motto text color */
+    font-family: 'Motto', cursive;
+    /* Custom font for motto */
 }
 
 /* Landing title styling for mobile screens */
 @media (max-width: 768px) {
     #landing-title {
-        display: inline-block; /* Shrink to fit content */
-        background-color: var(--border-color); /* Background color */
-        padding: 0.2em 0.5em; /* Padding around text */
-        border-radius: 0.5em; /* Rounded corners */
+        display: inline-block;
+        /* Shrink to fit content */
+        background-color: var(--border-color);
+        /* Background color */
+        padding: 0.2em 0.5em;
+        /* Padding around text */
+        border-radius: 0.5em;
+        /* Rounded corners */
     }
 }
 
-/* Highlight text when selected */
-::selection {
-    background-color: var(--highlight-color); /* Highlight background */
-    color: var(--highlight-text-color); /* Highlight text color */
+.my-img {
+    width: 19rem;
 }
 
 /* Custom Button Styling */
 .custom-button {
     display: inline-block;
-    padding: 1rem 2rem; /* Padding for button */
-    border-radius: 12px; /* Rounded corners */
-    font-size: 1.125rem; /* Font size */
-    font-weight: 600; /* Bold text */
-    text-align: center; /* Center text */
-    color: var(--button-text); /* Button text color */
-    background-color: var(--button-bg); /* Button background color */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), /* Outer shadow */
-                inset 0px 0px 8px rgba(255, 255, 255, 0.1); /* Inner glow */
-    transition: all 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    padding: 1rem 2rem;
+    /* Padding for button */
+    border-radius: 12px;
+    /* Rounded corners */
+    font-size: 1.125rem;
+    /* Font size */
+    font-weight: 600;
+    /* Bold text */
+    text-align: center;
+    /* Center text */
+    color: var(--button-text);
+    /* Button text color */
+    background-color: var(--button-bg);
+    /* Button background color */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+        /* Outer shadow */
+        inset 0px 0px 8px rgba(255, 255, 255, 0.1);
+    /* Inner glow */
+    transition: all 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions */
 }
 
 .custom-button:hover {
-    transform: translateY(-5px) scale(1.05); /* Lift and scale on hover */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2), /* Enhanced shadow */
-                inset 0px 0px 10px rgba(255, 255, 255, 0.2); /* Enhanced glow */
+    transform: translateY(-5px) scale(1.05);
+    /* Lift and scale on hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2),
+        /* Enhanced shadow */
+        inset 0px 0px 10px rgba(255, 255, 255, 0.2);
+    /* Enhanced glow */
 }
 
 .custom-button:active {
-    transform: translateY(0) scale(1); /* Reset transform on click */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), /* Reset shadow */
-                inset 0px 0px 8px rgba(255, 255, 255, 0.1); /* Reset glow */
+    transform: translateY(0) scale(1);
+    /* Reset transform on click */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1),
+        /* Reset shadow */
+        inset 0px 0px 8px rgba(255, 255, 255, 0.1);
+    /* Reset glow */
 }
 
 /* Button Glow Effect */
@@ -127,48 +187,67 @@ body {
     background-color: var(--button-bg);
     color: var(--button-text);
     border: 2px solid var(--button-bg);
-    box-shadow: none; /* No glow by default */
+    box-shadow: none;
+    /* No glow by default */
 }
 
 .button-glow:hover {
-    box-shadow: 0 0 15px 3px rgba(36, 213, 242, 0.6); /* Slight glow on hover */
-    transform: scale(1.03); /* Slight scaling effect */
+    box-shadow: 0 0 15px 3px rgba(36, 213, 242, 0.6);
+    /* Slight glow on hover */
+    transform: scale(1.03);
+    /* Slight scaling effect */
 }
 
 .button-glow:active {
-    box-shadow: 0 0 8px 2px rgba(36, 213, 242, 0.4); /* Diminished glow on click */
-    transform: scale(0.98); /* Button compresses slightly on click */
+    box-shadow: 0 0 8px 2px rgba(36, 213, 242, 0.4);
+    /* Diminished glow on click */
+    transform: scale(0.98);
+    /* Button compresses slightly on click */
 }
 
-
+.hire-me-button {
+    border-color: white;
+}
 
 /* Project Section */
 
 /* Enforce 16:9 aspect ratio for iframe containers */
 .mobile-iframe-container,
 .desktop-iframe-container {
-    position: relative; /* Position for aspect ratio */
-    width: 100%; /* Full width */
-    overflow: hidden; /* Hide overflow */
+    position: relative;
+    /* Position for aspect ratio */
+    width: 100%;
+    /* Full width */
+    overflow: hidden;
+    /* Hide overflow */
 }
 
 /* 16:9 aspect ratio using padding-bottom (9/16 = 56.25%) */
 .mobile-iframe-container {
-    padding-bottom: 56.25%; /* Maintain aspect ratio */
-    height: 400px; /* Fixed height for mobile */
+    padding-bottom: 56.25%;
+    /* Maintain aspect ratio */
+    height: 400px;
+    /* Fixed height for mobile */
 }
 
 .desktop-iframe-container {
-    padding-bottom: 56.25%; /* Maintain aspect ratio */
-    height: 500px; /* Fixed height for desktop */
+    padding-bottom: 56.25%;
+    /* Maintain aspect ratio */
+    height: 500px;
+    /* Fixed height for desktop */
 }
 
 /* Ensure iframes fill the container while maintaining aspect ratio */
 .mobile-iframe-container iframe,
 .desktop-iframe-container iframe {
-    position: absolute; /* Position iframe */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    position: absolute;
+    /* Position iframe */
+    top: 0;
+    /* Align to top */
+    left: 0;
+    /* Align to left */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
 }

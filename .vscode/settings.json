@@ -4,5 +4,6 @@
         "Matplotlib",
         "SHAP",
         "Vanta"
-    ]
+    ],
+    "livePreview.defaultPreviewPath": "/index.html"
 }

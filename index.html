@@ -89,106 +89,98 @@
   <body
     class="text-white snap-y snap-mandatory overflow-y-scroll h-screen scroll-snap"
   >
-  <section
-  id="landing"
-  class="snap-start h-screen w-full flex flex-col md:flex-row items-center justify-start md:justify-center px-6 md:px-24 gap-12 relative overflow-hidden md:text-left"
->
-  <!-- Background (Top 70%) -->
-  <div
-    id="vanta-bg"
-    class="absolute top-0 left-0 w-full h-[70vh] z-0"
-  ></div>
-
-  <!-- Bottom 30% Background -->
-  <div class="absolute bottom-0 left-0 w-full h-[30vh] bg-black z-0"></div>
-
-  <!-- Content (Text and Image) -->
-  <div
-    class="relative top-10 z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full pt-12 md:pt-0"
-  >
-    <div
-      class="text-center md:text-left"
-      data-aos="fade-left"
-      data-aos-duration="800"
-      data-aos-delay="100"
+    <section
+      id="landing"
+      class="snap-start h-screen w-full flex flex-col md:flex-row items-center justify-start md:justify-center px-6 md:px-24 gap-12 relative overflow-hidden md:text-left"
     >
-      <h1
-        id="landing-title"
-        class="text-5xl sm:text-4xl lg:text-8xl font-extrabold mb-8 leading-tight landing-heading"
+      <!-- Background (Top 70%) -->
+      <div
+        id="vanta-bg"
+        class="absolute top-0 left-0 w-full h-[70vh] z-0"
+      ></div>
+
+      <!-- Bottom 30% Background -->
+      <div class="absolute bottom-0 left-0 w-full h-[30vh] bg-black z-0"></div>
+
+      <!-- Content (Text and Image) -->
+      <div
+        class="relative top-10 z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full pt-12 md:pt-0"
       >
-        Shail K Patel
-      </h1>
-      <p class="text-3xl sm:text-4xl lg:text-4xl mb-4 landing-text">
-        I help <span class="motto">innovators</span> solve real-world
-        problems using <span class="motto">Machine Learning</span>.<br />
-        Let’s collaborate and build something
-        <span class="italic">impactful</span>.
-      </p>
-    </div>      
-    <!-- Profile Image (Hidden on mobile, visible on md and above, set to 100px) -->
-    <div
-      class="hidden md:block w-[400px] h-[400px] rounded-full overflow-hidden shadow-lg border-4 border-cyan-400 mx-auto md:mx-0 mt-4 md:mt-0"
-      style="width: 300px !important;"
-    >
-      <img
-        src="assets/images/profile-pic.png"
-        sizes="(max-width: 768px) 288px, 400px"
-        alt="Shail K Patel, Machine Learning Intern Profile Picture"
-        class="w-full h-full object-cover rounded-full"
-        style="width: 300px !important;"
-        loading="eager"
-      />
-    </div>
-  </div>
+        <div
+          class="text-center md:text-left"
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-delay="100"
+        >
+          <h1
+            id="landing-title"
+            class="text-5xl sm:text-4xl lg:text-8xl font-extrabold mb-8 leading-tight landing-heading"
+          >
+            Shail K Patel
+          </h1>
+          <p class="text-3xl sm:text-4xl lg:text-4xl mb-4 landing-text">
+            I help <span class="motto">innovators</span> solve real-world
+            problems using <span class="motto">Machine Learning</span>.<br />
+            Let’s collaborate and build something
+            <span class="italic">impactful</span>.
+          </p>
+        </div>
+        <!-- Profile Image (Hidden on mobile, visible on md and above, set to 100px) -->
+        <div
+          class="hidden md:block w-[400px] h-[400px] rounded-full overflow-hidden shadow-lg mx-auto md:mx-0 mt-4 md:mt-0 my-img"
+        >
+          <img
+            src="assets/images/profile-pic.png"
+            sizes="(max-width: 768px) 288px, 400px"
+            alt="Shail K Patel, Machine Learning Intern Profile Picture"
+            class="w-full h-full object-cover rounded-full"
+            loading="eager"
+          />
+        </div>
+      </div>
 
-  <!-- Bottom 30% (Buttons) -->
-  <div
-  class="absolute bottom-12 md:bottom-20 left-0 w-full flex flex-col md:flex-row items-center justify-center gap-4 md:gap-4 z-10 px-4 md:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-4"
->
-<a
-  href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
-  onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
-  aria-label="Send an email to Shail to discuss hiring opportunities"
-  class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-  data-tilt
-  style="border-color: white;"
->
-  Hire Me
-</a>
+      <!-- Bottom 30% (Buttons) -->
+      <div
+        class="absolute bottom-16 left-0 w-full flex flex-col md:flex-row items-center justify-center gap-4 z-10 px-4 md:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-4"
+      >
+        <a
+          href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
+          onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
+          aria-label="Send an email to Shail to discuss hiring opportunities"
+          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow hire-me-button"
+          data-tilt
+        >
+          Hire Me
+        </a>
 
+        <a
+          href="https://www.linkedin.com/in/shail-k-patel/"
+          target="_blank"
+          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+          data-tilt
+        >
+          LinkedIn
+        </a>
 
-  <a
-    href="https://www.linkedin.com/in/shail-k-patel/"
-    target="_blank"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-    data-tilt
-  >
-    LinkedIn
-  </a>
+        <a
+          href="http://github.com/ShailKPatel"
+          target="_blank"
+          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+          data-tilt
+        >
+          GitHub
+        </a>
 
-  <a
-    href="http://github.com/ShailKPatel"
-    target="_blank"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-    data-tilt
-  >
-    GitHub
-  </a>
-
-  <a
-    href="assets/pdf/Shail Resume.pdf"
-    target="_blank"
-    class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-    data-tilt
-  >
-    Resume
-  </a>
-</div>
-
-
-
-
-</section>
+        <a
+          href="assets/pdf/Shail Resume.pdf"
+          target="_blank"
+          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
+          data-tilt
+        >
+          Resume
+        </a>
+      </div>
+    </section>
 
     <!-- Project section -->
     <section
@@ -196,11 +188,7 @@
       class="snap-start min-h-screen w-full flex flex-col items-center justify-start px-6 md:px-24 pt-12 bg-[#121212] text-white overflow-y-auto"
     >
       <h2
-        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center"
-        style="
-          font-family: 'Cabin Sketch', cursive;
-          color: var(--heading-color);
-        "
+        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center section-header"
       >
         My Projects
       </h2>
@@ -427,11 +415,7 @@
       class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white"
     >
       <h2
-        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center"
-        style="
-          font-family: 'Cabin Sketch', cursive;
-          color: var(--heading-color);
-        "
+        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center section-header"
       >
         Research
       </h2>
@@ -444,10 +428,7 @@
           Comparative Analysis of Bias Detection Methods for Educational
           Datasets: Evaluating Performance Across Diverse Bias Types
         </h3>
-        <div
-          class="w-full max-w-[450px] relative"
-          style="padding-bottom: 17.78%"
-        >
+        <div class="w-full max-w-[450px] relative padding-b">
           <div
             class="absolute inset-0 bg-white flex items-center justify-center rounded-lg shadow-lg border border-gray-200"
           >
@@ -464,18 +445,12 @@
 
     <!-- skills section -->
     <section
-  id="skills"
-  class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white"
->
-
-     
-    <h2
-    class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center"
-    style="
-      font-family: 'Cabin Sketch', cursive;
-      color: var(--heading-color);
-    "
-  >
+      id="skills"
+      class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white"
+    >
+      <h2
+        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center section-header"
+      >
         Skills
       </h2>
 
@@ -1130,13 +1105,12 @@
       </div>
     </section>
 
-<!-- Scripts for AOS + Vanta -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-<script src="js/main.js"></script>
-
+    <!-- Scripts for AOS + Vanta -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
