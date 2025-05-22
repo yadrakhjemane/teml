@@ -79,6 +79,10 @@ body {
     padding-bottom: 17.78% !important;
 }
 
+.sf-font{
+    font-family: 'SF', sans-serif !important;
+    color: var(--text-color);
+}
 /* Highlight text when selected */
 ::selection {
     background-color: var(--highlight-color);
