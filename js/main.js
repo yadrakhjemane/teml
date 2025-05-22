@@ -28,6 +28,49 @@ VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
   "max-glare": 0.2,
 });
 
+// Show Skills based on Semester
+document.addEventListener("DOMContentLoaded", function () {
+  // Show default semester (4)
+  const defaultSem = 4;
+  showSkills(defaultSem);
+
+  // Show Skills based on Semester
+  function showSkills(sem) {
+    document.querySelectorAll(".college-skills-list").forEach((list) => {
+      list.classList.add("hidden"); // Hide all skill lists
+      list.classList.remove("active");
+    });
+
+    document.querySelectorAll(".semester-buttons button").forEach((button) =>
+      button.classList.remove("active")
+    );
+
+    const selectedList = document.getElementById(`college-skills-list-${sem}`);
+    const selectedButton = document.querySelector(
+      `.semester-buttons button:nth-child(${sem})`
+    );
+
+    if (selectedList) {
+      selectedList.classList.remove("hidden");
+      selectedList.classList.add("active");
+    }
+    if (selectedButton) {
+      selectedButton.classList.add("active");
+    }
+  }
+
+  // Dynamically attach click events to buttons
+  document.querySelectorAll(".semester-buttons button").forEach((button, index) => {
+    const sem = index + 1; // Button index corresponds to semester number
+    button.addEventListener("click", () => {
+      if (!button.classList.contains("cursor-not-allowed")) {
+        showSkills(sem);
+      }
+    });
+  });
+});
+
+
 // Handle mailto link with Gmail fallback
 function tryMailto(mailtoUrl) {
   const emailWindow = window.open(mailtoUrl, "_blank");
