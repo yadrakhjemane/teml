@@ -7,16 +7,14 @@
 
 #### **2. Sections & Features**  
 - **Landing Section**  
-  - Displays a profile picture and name  
+  - Displays a Profile picture, name, and short motto  
   - Shows a role description: *Machine Learning Enthusiast*  
   - Includes a motivational quote  
 
 - **Social Media Links**  
-  - GitHub, LinkedIn, Alternate GitHub, YouTube  
+  - GitHub, LinkedIn, Hire Me button, YouTube  
 
-- **Sidebar (Fixed on Larger Screens)**  
-  - Profile picture, name, role, short motto  
-  - Navigation menu for quick access   
+
 
 - **Projects Section**  
   - Showcases multiple projects with a **slideshow** format  
