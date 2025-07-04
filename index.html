@@ -194,7 +194,78 @@
       </h2>
 
       <div class="w-full max-w-5xl flex flex-col gap-12 pb-12">
-        <!-- Project 1: Beyond The Marks -->
+        <!-- Project 1: PredictGrad -->
+        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
+          <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
+            PredictGrad
+            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
+              >Jul 2025</span
+            >
+          </h3>
+          <ul
+            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6 sf-font"
+          >
+            <li>
+              Built a full ML pipeline to predict Semester 3 marks for core
+              subjects and detect students at academic risk based on percentile
+              drop.
+            </li>
+            <li>
+              Regression: Voting Regressor (Ridge + Lasso + ElasticNet);
+              Classification: Stacking (CatBoost, LGBM, ExtraTrees, Logistic
+              Regression meta).
+            </li>
+            <li>
+              Flags risk when predicted percentile falls ≥10 points from
+              previous semester; enables early academic intervention.
+            </li>
+            <li>
+              Deployed as a Streamlit app with interactive student selector,
+              risk explanation (XAI), and data insights dashboard.
+            </li>
+            <li>
+              <strong>Technologies:</strong> Python, Scikit-learn, CatBoost,
+              LightGBM, SHAP, Pandas, Streamlit, Matplotlib.
+            </li>
+          </ul>
+
+          <!-- Responsive iframe container -->
+          <div
+            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
+            <div class="block md:hidden mobile-iframe-container">
+              <!-- Mobile view -->
+              <iframe
+                src="https://predictgrad.streamlit.app/?embed=true"
+                class="w-full h-full"
+                allowfullscreen
+                title="PredictGrad Demo"
+              ></iframe>
+            </div>
+            <div class="hidden md:block desktop-iframe-container">
+              <!-- Desktop view -->
+              <iframe
+                src="https://predictgrad.streamlit.app/?embed=true"
+                class="w-full h-full"
+                allowfullscreen
+                title="PredictGrad Demo"
+              ></iframe>
+            </div>
+          </div>
+
+          <a
+            href="https://predictgrad.streamlit.app/"
+            target="_blank"
+            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block sf-font"
+          >
+            Try It Live
+          </a>
+        </div>
+
+        <!-- Project 2: Beyond The Marks -->
         <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
           <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
             Beyond The Marks
@@ -262,7 +333,7 @@
           </a>
         </div>
 
-        <!-- Project 2: Attend2Achieve -->
+        <!-- Project 3: Attend2Achieve -->
         <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
           <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
             Attend2Achieve
@@ -327,7 +398,7 @@
           </a>
         </div>
 
-        <!-- Project 3: The Profit Oracle -->
+        <!-- Project 4: The Profit Oracle -->
         <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
           <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
             The Profit Oracle
