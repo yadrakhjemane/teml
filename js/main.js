@@ -140,6 +140,21 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize active nav link
     updateActiveNavLink();
 
+    // Intersection Observer for section titles
+    const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.3 });
+
+    // Observe section titles
+    const sectionTitles = document.querySelectorAll('.section-title');
+    sectionTitles.forEach(title => {
+        titleObserver.observe(title);
+    });
+
     // Intersection Observer for fade-in animations
     const observerOptions = {
         threshold: 0.1,
@@ -160,17 +175,21 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Parallax effect for floating shapes
-    window.addEventListener('scroll', () => {
+    // Enhanced parallax effect for floating shapes
+    const parallaxShapes = debounce(() => {
         const scrolled = window.pageYOffset;
         const shapes = document.querySelectorAll('.shape');
         
         shapes.forEach((shape, index) => {
-            const speed = 0.5 + (index * 0.1);
+            const speed = 0.3 + (index * 0.15);
             const yPos = -(scrolled * speed);
-            shape.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+            const rotation = scrolled * 0.05 * (index + 1);
+            const scale = 1 + Math.sin(scrolled * 0.001 + index) * 0.1;
+            shape.style.transform = `translateY(${yPos}px) rotate(${rotation}deg) scale(${scale})`;
         });
-    });
+    }, 16);
+
+    window.addEventListener('scroll', parallaxShapes);
 
     // Add loading class to body when page loads
     document.body.classList.add('loaded');
