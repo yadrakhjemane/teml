@@ -1056,3 +1056,23 @@ body.dark-theme ::-webkit-scrollbar-thumb {
 body.dark-theme ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #cccccc 0%, #aaaaaa 100%);
 }
+
+/* Fix for button and link interactions */
+.btn-3d,
+.project-link {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.btn-3d:focus,
+.project-link:focus {
+  outline: 2px solid rgba(0, 0, 0, 0.3);
+  outline-offset: 2px;
+}
+
+body.dark-theme .btn-3d:focus,
+body.dark-theme .project-link:focus {
+  outline-color: rgba(255, 255, 255, 0.3);
+}

@@ -197,6 +197,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Enhanced button interactions
     const buttons = document.querySelectorAll('.btn-3d');
     buttons.forEach(btn => {
+        // Remove any existing event listeners
+        btn.replaceWith(btn.cloneNode(true));
+    });
+    
+    // Re-select buttons after cloning
+    const newButtons = document.querySelectorAll('.btn-3d');
+    newButtons.forEach(btn => {
         btn.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-3px) scale(1.02)';
         });
@@ -211,6 +218,34 @@ document.addEventListener('DOMContentLoaded', function() {
         
         btn.addEventListener('mouseup', function() {
             this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        btn.addEventListener('click', function(e) {
+            // Ensure the link works properly
+            if (this.href) {
+                e.preventDefault();
+                window.open(this.href, this.target || '_self');
+            }
+        });
+    });
+
+    // Fix project links specifically
+    const projectLinks = document.querySelectorAll('.project-link');
+    projectLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = this.getAttribute('href');
+            if (url) {
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        });
+        
+        link.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-2px)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
         });
     });
 
