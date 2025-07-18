@@ -1,92 +1,228 @@
-// Initialize AOS
-AOS.init();
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+    }
 
-// Vanta.GLOBE background setup
-VANTA.GLOBE({
-  el: "#vanta-bg",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: window.innerHeight * 0.7, // Ensure Vanta.js respects 70vh
-  minWidth: window.innerWidth, // Ensure Vanta.js respects 100vh
-  scale: 1,
-  scaleMobile: 1.0,
-  backgroundColor: 0x1b263b,
-  color: 0x23a7c2, // Cyan net color
-  color2: 0x707070, // Secondary grey color
-  points: 12.0,
-  maxDistance: 20.0,
-  spacing: 15.0,
-  size: 0.5,
-});
-
-// VanillaTilt initialization for buttons
-VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
-  max: 15,
-  speed: 300,
-  glare: true,
-  "max-glare": 0.2,
-});
-
-// Show Skills based on Semester
-document.addEventListener("DOMContentLoaded", function () {
-  // Show default semester (4)
-  const defaultSem = 4;
-  showSkills(defaultSem);
-
-  // Show Skills based on Semester
-  function showSkills(sem) {
-    document.querySelectorAll(".college-skills-list").forEach((list) => {
-      list.classList.add("hidden"); // Hide all skill lists
-      list.classList.remove("active");
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu?.querySelectorAll('a');
+    mobileLinks?.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
     });
 
-    document.querySelectorAll(".semester-buttons button").forEach((button) =>
-      button.classList.remove("active")
-    );
+    // Skills Data
+    const skills = [
+        { name: 'Supervised ML', icon: 'assets/images/logo/supervised_learning.png', level: '70%' },
+        { name: 'Unsupervised ML', icon: 'assets/images/logo/unsupervised_learning.png', level: '68%' },
+        { name: 'Reinforcement Learning', icon: 'assets/images/logo/reinforcement_learning.png', level: '65%' },
+        { name: 'Deep Learning', icon: 'assets/images/logo/deep_learning.png', level: '80%' },
+        { name: 'Neural Networks', icon: 'assets/images/logo/neural_networks.png', level: '75%' },
+        { name: 'TensorFlow', icon: 'assets/images/logo/TensorFlow.png', level: '60%' },
+        { name: 'Scikit-Learn', icon: 'assets/images/logo/scikit-learn.png', level: '70%' },
+        { name: 'Streamlit', icon: 'assets/images/logo/streamlit.png', level: '68%' },
+        { name: 'MERN Stack', icon: 'assets/images/logo/MERN.png', level: '70%' },
+        { name: 'Bootstrap', icon: 'assets/images/logo/bootstrap.png', level: '65%' },
+        { name: 'Tailwind CSS', icon: 'assets/images/logo/Tailwind.png', level: '68%' },
+        { name: 'JavaScript', icon: 'assets/images/logo/ecmascript.png', level: '75%' },
+        { name: 'MySQL', icon: 'assets/images/logo/mysql.png', level: '70%' },
+        { name: 'PostgreSQL', icon: 'assets/images/logo/postgressql.png', level: '68%' },
+        { name: 'Java', icon: 'assets/images/logo/java.png', level: '65%' },
+        { name: 'Git', icon: 'assets/images/logo/git.png', level: '75%' }
+    ];
 
-    const selectedList = document.getElementById(`college-skills-list-${sem}`);
-    const selectedButton = document.querySelector(
-      `.semester-buttons button:nth-child(${sem})`
-    );
-
-    if (selectedList) {
-      selectedList.classList.remove("hidden");
-      selectedList.classList.add("active");
+    // Populate Skills Section
+    const skillsContainer = document.querySelector('#skills .grid');
+    if (skillsContainer) {
+        skills.forEach((skill, index) => {
+            const skillElement = document.createElement('div');
+            skillElement.className = 'skill-item fade-in';
+            skillElement.style.animationDelay = `${index * 0.1}s`;
+            skillElement.innerHTML = `
+                <img src="${skill.icon}" alt="${skill.name}" class="skill-icon" />
+                <div class="skill-name">${skill.name}</div>
+                <div class="skill-level">Proficiency: ${skill.level}</div>
+            `;
+            skillsContainer.appendChild(skillElement);
+        });
     }
-    if (selectedButton) {
-      selectedButton.classList.add("active");
-    }
-  }
 
-  // Dynamically attach click events to buttons
-  document.querySelectorAll(".semester-buttons button").forEach((button, index) => {
-    const sem = index + 1; // Button index corresponds to semester number
-    button.addEventListener("click", () => {
-      if (!button.classList.contains("cursor-not-allowed")) {
-        showSkills(sem);
-      }
+    // Education Semester Toggle
+    const semesterBtns = document.querySelectorAll('.semester-btn:not(.disabled)');
+    const semesterSkills = document.querySelectorAll('.semester-skills');
+
+    semesterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const semester = this.dataset.semester;
+            
+            // Remove active class from all buttons and skills
+            semesterBtns.forEach(b => b.classList.remove('active'));
+            semesterSkills.forEach(s => s.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding skills
+            this.classList.add('active');
+            const targetSkills = document.querySelector(`.semester-skills[data-semester="${semester}"]`);
+            if (targetSkills) {
+                targetSkills.classList.add('active');
+            }
+        });
     });
-  });
+
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 80; // Account for fixed nav
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    const animateElements = document.querySelectorAll('.project-card, .education-card, .contact-card');
+    animateElements.forEach(el => {
+        observer.observe(el);
+    });
+
+    // Parallax effect for floating shapes
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const shapes = document.querySelectorAll('.shape');
+        
+        shapes.forEach((shape, index) => {
+            const speed = 0.5 + (index * 0.1);
+            const yPos = -(scrolled * speed);
+            shape.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
+        });
+    });
+
+    // Add loading class to body when page loads
+    document.body.classList.add('loaded');
+
+    // Enhanced button interactions
+    const buttons = document.querySelectorAll('.btn-3d');
+    buttons.forEach(btn => {
+        btn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        btn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+        
+        btn.addEventListener('mousedown', function() {
+            this.style.transform = 'translateY(1px) scale(0.98)';
+        });
+        
+        btn.addEventListener('mouseup', function() {
+            this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+    });
+
+    // Navbar background on scroll
+    const navbar = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Add CSS for scrolled navbar
+    const style = document.createElement('style');
+    style.textContent = `
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Email handling function
+    window.tryMailto = function(mailtoUrl) {
+        const emailWindow = window.open(mailtoUrl, "_blank");
+        setTimeout(() => {
+            if (!emailWindow || emailWindow.closed || typeof emailWindow.closed === "undefined") {
+                const params = mailtoUrl.split("?")[1];
+                const subject = params.match(/subject=([^&]*)/)?.[1] || "";
+                const body = params.match(/body=([^&]*)/)?.[1] || "";
+                const to = mailtoUrl.split("?")[0].replace("mailto:", "");
+                window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+            } else {
+                emailWindow.close();
+            }
+        }, 500);
+    };
+
+    // Add hover effects to project cards
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) rotateX(5deg) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) rotateX(0) scale(1)';
+        });
+    });
+
+    // Typing effect for hero title (optional enhancement)
+    const heroTitle = document.querySelector('.hero-title');
+    if (heroTitle) {
+        heroTitle.style.opacity = '0';
+        setTimeout(() => {
+            heroTitle.style.opacity = '1';
+            heroTitle.style.animation = 'fadeInUp 1s ease-out';
+        }, 500);
+    }
 });
 
-
-// Handle mailto link with Gmail fallback
-function tryMailto(mailtoUrl) {
-  const emailWindow = window.open(mailtoUrl, "_blank");
-  setTimeout(() => {
-    if (
-      !emailWindow ||
-      emailWindow.closed ||
-      typeof emailWindow.closed === "undefined"
-    ) {
-      const params = mailtoUrl.split("?")[1];
-      const subject = params.match(/subject=([^&]*)/)?.[1] || "";
-      const body = params.match(/body=([^&]*)/)?.[1] || "";
-      const to = mailtoUrl.split("?")[0].replace("mailto:", "");
-      window.location.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
-    } else {
-      emailWindow.close();
-    }
-  }, 500);
+// Performance optimization: Debounce scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
 }
+
+// Apply debounce to scroll events
+const debouncedScroll = debounce(() => {
+    // Scroll-based animations can go here
+}, 10);
+
+window.addEventListener('scroll', debouncedScroll);

@@ -13,7 +13,7 @@
       content="Shail K Patel, Machine Learning, AI, Data Science, Portfolio, Projects, Research, Intern, Hire"
     />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#121212" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Social Sharing (Open Graph for LinkedIn, GitHub previews) -->
     <meta
@@ -22,7 +22,7 @@
     />
     <meta
       property="og:description"
-      content="Machine Learning intern passionate about solving real-world problems with AI. Explore my projects, research, and skills. Let’s build the future together."
+      content="Machine Learning intern passionate about solving real-world problems with AI. Explore my projects, research, and skills. Let's build the future together."
     />
     <meta property="og:url" content="https://shailpatel.github.io/" />
     <meta property="og:type" content="website" />
@@ -64,9 +64,6 @@
       rel="stylesheet"
     />
 
-    <!-- AOS Animation CSS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -86,1201 +83,369 @@
     />
   </head>
 
-  <body
-    class="text-white snap-y snap-mandatory overflow-y-scroll h-screen scroll-snap"
-  >
-    <section
-      id="landing"
-      class="snap-start h-screen w-full flex flex-col md:flex-row items-center justify-start md:justify-center px-6 md:px-24 gap-12 relative overflow-hidden md:text-left"
-    >
-      <!-- Background (Top 70%) -->
-      <div
-        id="vanta-bg"
-        class="absolute top-0 left-0 w-full h-[70vh] z-0"
-      ></div>
-
-      <!-- Bottom 30% Background -->
-      <div class="absolute bottom-0 left-0 w-full h-[30vh] bg-black z-0"></div>
-
-      <!-- Content (Text and Image) -->
-      <div
-        class="relative top-10 z-10 flex flex-col md:flex-row items-center justify-center gap-12 w-full pt-12 md:pt-0"
-      >
-        <div
-          class="text-center md:text-left"
-          data-aos="fade-left"
-          data-aos-duration="800"
-          data-aos-delay="100"
-        >
-          <h1
-            id="landing-title"
-            class="text-5xl sm:text-4xl lg:text-8xl font-extrabold mb-8 leading-tight landing-heading"
-          >
+  <body class="bg-white text-black overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="text-2xl font-bold text-black hover:scale-105 transition-transform duration-300 cursor-pointer">
             Shail K Patel
-          </h1>
-          <p class="text-3xl sm:text-4xl lg:text-4xl mb-4 landing-text">
-            I help <span class="motto">innovators</span> solve real-world
-            problems using <span class="motto">Machine Learning</span>.<br />
-            Let’s collaborate and build something
-            <span class="italic">impactful</span>.
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#contact" class="nav-link">Contact</a>
+          </div>
+          <div class="md:hidden">
+            <button id="mobile-menu-btn" class="text-black hover:text-gray-600">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div class="px-6 py-4 space-y-4">
+          <a href="#hero" class="block nav-link">Home</a>
+          <a href="#projects" class="block nav-link">Projects</a>
+          <a href="#skills" class="block nav-link">Skills</a>
+          <a href="#education" class="block nav-link">Education</a>
+          <a href="#contact" class="block nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+      <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+      </div>
+      
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-center md:text-left space-y-8">
+          <div class="hero-text-container">
+            <h1 class="hero-title">
+              <span class="block text-6xl md:text-8xl font-black mb-4">Shail K</span>
+              <span class="block text-6xl md:text-8xl font-black text-gradient">Patel</span>
+            </h1>
+          </div>
+          
+          <p class="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl">
+            I help <span class="font-bold text-black">innovators</span> solve real-world problems using 
+            <span class="font-bold text-black">Machine Learning</span>. Let's collaborate and build something 
+            <span class="italic font-semibold">impactful</span>.
           </p>
+          
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <a href="#contact" class="btn-3d btn-primary">
+              <span>Hire Me</span>
+            </a>
+            <a href="https://www.linkedin.com/in/shail-k-patel/" target="_blank" class="btn-3d btn-secondary">
+              <span>LinkedIn</span>
+            </a>
+            <a href="http://github.com/ShailKPatel" target="_blank" class="btn-3d btn-secondary">
+              <span>GitHub</span>
+            </a>
+            <a href="assets/pdf/Shail Resume.pdf" target="_blank" class="btn-3d btn-secondary">
+              <span>Resume</span>
+            </a>
+          </div>
         </div>
-        <!-- Profile Image (Hidden on mobile, visible on md and above, set to 100px) -->
-        <div
-          class="hidden md:block w-[400px] h-[400px] rounded-full overflow-hidden shadow-lg mx-auto md:mx-0 mt-4 md:mt-0 my-img"
-        >
-          <img
-            src="assets/images/profile-pic.png"
-            sizes="(max-width: 768px) 288px, 400px"
-            alt="Shail K Patel, Machine Learning Intern Profile Picture"
-            class="w-full h-full object-cover rounded-full"
-            loading="eager"
-          />
-        </div>
-      </div>
-
-      <!-- Bottom 30% (Buttons) -->
-      <div
-        class="absolute bottom-16 left-0 w-full flex flex-col md:flex-row items-center justify-center gap-4 z-10 px-4 md:px-10 lg:px-20 grid grid-cols-2 md:grid-cols-4"
-      >
-        <a
-          href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
-          onclick="tryMailto(this.href, 'Hire Me Button'); return false;"
-          aria-label="Send an email to Shail to discuss hiring opportunities"
-          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow hire-me-button"
-          data-tilt
-        >
-          Hire Me
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/shail-k-patel/"
-          target="_blank"
-          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-          data-tilt
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="http://github.com/ShailKPatel"
-          target="_blank"
-          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-          data-tilt
-        >
-          GitHub
-        </a>
-
-        <a
-          href="assets/pdf/Shail Resume.pdf"
-          target="_blank"
-          class="inline-block px-7 py-3.5 rounded-xl text-lg font-semibold shadow-xl button-glow"
-          data-tilt
-        >
-          Resume
-        </a>
-      </div>
-    </section>
-
-    <!-- Project section -->
-    <section
-      id="projects"
-      class="snap-start min-h-screen w-full flex flex-col items-center justify-start px-6 md:px-24 pt-12 bg-[#121212] text-white overflow-y-auto"
-    >
-      <h2
-        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center section-header"
-      >
-        My Projects
-      </h2>
-
-      <div class="w-full max-w-5xl flex flex-col gap-12 pb-12">
-        <!-- Project 1: PredictGrad -->
-        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-          <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
-            PredictGrad
-            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
-              >Jul 2025</span
-            >
-          </h3>
-          <ul
-            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6 sf-font"
-          >
-            <li>
-              Built a full ML pipeline to predict Semester 3 marks for core
-              subjects and detect students at academic risk based on percentile
-              drop.
-            </li>
-            <li>
-              Regression: Voting Regressor (Ridge + Lasso + ElasticNet);
-              Classification: Stacking (CatBoost, LGBM, ExtraTrees, Logistic
-              Regression meta).
-            </li>
-            <li>
-              Flags risk when predicted percentile falls ≥10 points from
-              previous semester; enables early academic intervention.
-            </li>
-            <li>
-              Deployed as a Streamlit app with interactive student selector,
-              risk explanation (XAI), and data insights dashboard.
-            </li>
-            <li>
-              <strong>Technologies:</strong> Python, Scikit-learn, CatBoost,
-              LightGBM, SHAP, Pandas, Streamlit, Matplotlib.
-            </li>
-          </ul>
-
-          <!-- Responsive iframe container -->
-          <div
-            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="block md:hidden mobile-iframe-container">
-              <!-- Mobile view -->
-              <iframe
-                src="https://predictgrad.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="PredictGrad Demo"
-              ></iframe>
-            </div>
-            <div class="hidden md:block desktop-iframe-container">
-              <!-- Desktop view -->
-              <iframe
-                src="https://predictgrad.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="PredictGrad Demo"
-              ></iframe>
+        
+        <div class="flex justify-center">
+          <div class="profile-container">
+            <div class="profile-image-wrapper">
+              <img
+                src="assets/images/profile-pic.png"
+                alt="Shail K Patel Profile"
+                class="profile-image"
+              />
             </div>
           </div>
-
-          <a
-            href="https://predictgrad.streamlit.app/"
-            target="_blank"
-            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block sf-font"
-          >
-            Try It Live
-          </a>
-        </div>
-
-        <!-- Project 2: Beyond The Marks -->
-        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-          <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
-            Beyond The Marks
-            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
-              >Mar 2025</span
-            >
-          </h3>
-          <ul
-            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6 sf-font"
-          >
-            <li>
-              Developed an ML pipeline with explainable AI (SHAP) to analyze
-              student performance, detect grading bias, and assess the influence
-              of sensitive attributes (e.g., gender, religion).
-            </li>
-            <li>
-              Quantified teacher effectiveness and engineered performance
-              indicators (e.g., attendance trends, average marks) to evaluate
-              learning outcomes.
-            </li>
-            <li>
-              Used statistical methods (e.g., correlation analysis, one-hot
-              encoding) to explore relationships among attendance, grades, and
-              categorical student features.
-            </li>
-            <li>
-              <strong>Technologies:</strong> Python, Pandas, NumPy, SHAP,
-              Scikit-learn, Matplotlib/Seaborn.
-            </li>
-          </ul>
-
-          <!-- Responsive iframe container -->
-          <div
-            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="block md:hidden mobile-iframe-container">
-              <!-- Mobile view -->
-              <iframe
-                src="https://beyondthemarks.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="Beyond The Marks Demo"
-              ></iframe>
-            </div>
-            <div class="hidden md:block desktop-iframe-container">
-              <!-- Desktop view -->
-              <iframe
-                src="https://beyondthemarks.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="Beyond The Marks Demo"
-              ></iframe>
-            </div>
-          </div>
-
-          <a
-            href="https://beyondthemarks.streamlit.app/"
-            target="_blank"
-            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block sf-font"
-          >
-            Try It Live
-          </a>
-        </div>
-
-        <!-- Project 3: Attend2Achieve -->
-        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-          <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
-            Attend2Achieve
-            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
-              >Mar 2025</span
-            >
-          </h3>
-          <ul
-            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6 sf-font"
-          >
-            <li>
-              Analyzed subject attendance and marks (theory + practical) to find
-              correlations.
-            </li>
-            <li>
-              Explained performance patterns using statistical measures and
-              visualized data with plots and heatmaps.
-            </li>
-            <li>
-              Proposed subject-specific improvements and presented an overall
-              academic insights dashboard.
-            </li>
-            <li>
-              <strong>Technologies:</strong> Python, Pandas, NumPy, Matplotlib,
-              Seaborn, Streamlit.
-            </li>
-          </ul>
-
-          <!-- Responsive iframe container -->
-          <div
-            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="block md:hidden mobile-iframe-container">
-              <!-- Mobile view -->
-              <iframe
-                src="https://attend2achieve.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="Attend2Achieve Demo"
-              ></iframe>
-            </div>
-            <div class="hidden md:block desktop-iframe-container">
-              <!-- PC/Desktop view -->
-              <iframe
-                src="https://attend2achieve.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="Attend2Achieve Demo"
-              ></iframe>
-            </div>
-          </div>
-
-          <a
-            href="https://attend2achieve.streamlit.app/"
-            target="_blank"
-            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block sf-font"
-          >
-            Try It Live
-          </a>
-        </div>
-
-        <!-- Project 4: The Profit Oracle -->
-        <div class="flex flex-col bg-[#1A1A1A] rounded-xl p-6 shadow-xl">
-          <h3 class="text-4xl md:text-5xl font-bold mb-4 sf-font">
-            The Profit Oracle
-            <span class="text-gray-400 text-2xl md:text-3xl ml-2"
-              >Feb 2025</span
-            >
-          </h3>
-          <ul
-            class="text-xl md:text-2xl text-gray-300 list-disc list-inside mb-6 sf-font"
-          >
-            <li>
-              Developed a Python/ML Streamlit tool for financial analysis and
-              revenue forecasting.
-            </li>
-            <li>
-              Automated insights on returns, repeat customers, and
-              location-based behavior.
-            </li>
-            <li>
-              Compared costs vs. prices, and analyzed profit/sales by product
-              and location using ML.
-            </li>
-            <li>
-              <strong>Technologies:</strong> Python, Pandas, NumPy,
-              Scikit-learn, Streamlit, Matplotlib.
-            </li>
-          </ul>
-
-          <!-- Responsive iframe container -->
-          <div
-            class="w-full rounded-xl overflow-hidden border-[3px] border-cyan-400 shadow-md mb-6"
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="200"
-          >
-            <div class="block md:hidden mobile-iframe-container">
-              <!-- Mobile view -->
-              <iframe
-                src="https://theprofitoracle.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="The Profit Oracle Demo"
-              ></iframe>
-            </div>
-            <div class="hidden md:block desktop-iframe-container">
-              <!-- Desktop view -->
-              <iframe
-                src="https://theprofitoracle.streamlit.app/?embed=true"
-                class="w-full h-full"
-                allowfullscreen
-                title="The Profit Oracle Demo"
-              ></iframe>
-            </div>
-          </div>
-
-          <a
-            href="https://theprofitoracle.streamlit.app/"
-            target="_blank"
-            class="text-cyan-400 hover:underline text-2xl md:text-3xl text-center block sf-font"
-          >
-            Try It Live
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- research section -->
-    <!-- <section
-      id="research"
-      class="snap-start h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-b;"
-    >
-      <h2
-        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center section-header"
-      >
-        Research
-      </h2>
-
-      <div class="w-full max-w-5xl flex flex-col items-center gap-6">
-        <h3 class="text-2xl md:text-3xl font-bold text-center sf-font">
-          Comparative Analysis of Bias Detection Methods for Educational
-          Datasets: Evaluating Performance Across Diverse Bias Types
-        </h3>
-        <div class="w-full max-w-[450px] relative padding-b">
-          <div
-            class="absolute inset-0 bg-white flex items-center justify-center rounded-lg shadow-lg border border-gray-200"
-          >
-            <p class="text-2xl md:text-3xl font-semibold text-black sf-font">
-              Coming Soon
-            </p>
-          </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="section-title">My Projects</h2>
+          <p class="text-xl text-gray-600 mt-4">Innovative solutions powered by Machine Learning</p>
         </div>
-      </div>
-    </section> -->
-
-    <!-- skills section -->
-    <section
-      id="skills"
-      class="snap-start min-h-screen w-full flex flex-col items-center justify-center px-6 md:px-24 bg-[#121212] text-white"
-    >
-      <h2
-        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-center section-header"
-      >
-        Skills
-      </h2>
-
-      <div
-        class="ww-[50%] max-w-5xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 md:gap-12"
-      >
-        <!-- Skill 1: Supervised Machine Learning -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <!-- removed rounded-full from img class -->
-            <img
-              src="assets/images/logo/supervised_learning.png"
-              alt="Supervised Machine Learning"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 70%
-            </p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">PredictGrad</h3>
+              <span class="project-date">Jul 2025</span>
+            </div>
+            <div class="project-content">
+              <ul class="project-features">
+                <li>Built a full ML pipeline to predict Semester 3 marks and detect academic risk</li>
+                <li>Regression: Voting Regressor (Ridge + Lasso + ElasticNet)</li>
+                <li>Classification: Stacking (CatBoost, LGBM, ExtraTrees)</li>
+                <li>Deployed as interactive Streamlit app with XAI explanations</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">SHAP</span>
+                <span class="tech-tag">Streamlit</span>
+              </div>
+              <div class="project-demo">
+                <iframe
+                  src="https://predictgrad.streamlit.app/?embed=true"
+                  class="demo-iframe"
+                  title="PredictGrad Demo"
+                ></iframe>
+              </div>
+              <a href="https://predictgrad.streamlit.app/" target="_blank" class="project-link">
+                Try It Live →
+              </a>
+            </div>
           </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Supervised Machine Learning
-          </span>
-        </div>
 
-        <!-- Skill 2: Unsupervised Machine Learning -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="150"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <!-- rounded-full -->
-
-            <img
-              src="assets/images/logo/unsupervised_learning.png"
-              alt="Unsupervised Machine Learning"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 68%
-            </p>
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Beyond The Marks</h3>
+              <span class="project-date">Mar 2025</span>
+            </div>
+            <div class="project-content">
+              <ul class="project-features">
+                <li>ML pipeline with explainable AI to analyze student performance</li>
+                <li>Detects grading bias and assesses influence of sensitive attributes</li>
+                <li>Quantified teacher effectiveness with performance indicators</li>
+                <li>Statistical analysis of attendance, grades, and student features</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">SHAP</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Matplotlib</span>
+              </div>
+              <div class="project-demo">
+                <iframe
+                  src="https://beyondthemarks.streamlit.app/?embed=true"
+                  class="demo-iframe"
+                  title="Beyond The Marks Demo"
+                ></iframe>
+              </div>
+              <a href="https://beyondthemarks.streamlit.app/" target="_blank" class="project-link">
+                Try It Live →
+              </a>
+            </div>
           </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Unsupervised Machine Learning
-          </span>
-        </div>
 
-        <!-- Skill 3: Reinforcement Learning -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 65) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <!-- removed rounded-full from img class -->
-
-            <img
-              src="assets/images/logo/reinforcement_learning.png"
-              alt="Reinforcement Learning"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 65%
-            </p>
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">Attend2Achieve</h3>
+              <span class="project-date">Mar 2025</span>
+            </div>
+            <div class="project-content">
+              <ul class="project-features">
+                <li>Analyzed subject attendance and marks correlations</li>
+                <li>Performance pattern explanation with statistical measures</li>
+                <li>Data visualization with plots and heatmaps</li>
+                <li>Academic insights dashboard with improvement suggestions</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Seaborn</span>
+                <span class="tech-tag">Streamlit</span>
+              </div>
+              <div class="project-demo">
+                <iframe
+                  src="https://attend2achieve.streamlit.app/?embed=true"
+                  class="demo-iframe"
+                  title="Attend2Achieve Demo"
+                ></iframe>
+              </div>
+              <a href="https://attend2achieve.streamlit.app/" target="_blank" class="project-link">
+                Try It Live →
+              </a>
+            </div>
           </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Reinforcement Learning
-          </span>
-        </div>
 
-        <!-- Skill 4: Deep Learning -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="250"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 80) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/deep_learning.png"
-              alt="Deep Learning"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 80%
-            </p>
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-header">
+              <h3 class="project-title">The Profit Oracle</h3>
+              <span class="project-date">Feb 2025</span>
+            </div>
+            <div class="project-content">
+              <ul class="project-features">
+                <li>Financial analysis and revenue forecasting tool</li>
+                <li>Automated insights on returns and customer behavior</li>
+                <li>Location-based analysis with ML algorithms</li>
+                <li>Cost vs price comparison and profit analysis</li>
+              </ul>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">NumPy</span>
+              </div>
+              <div class="project-demo">
+                <iframe
+                  src="https://theprofitoracle.streamlit.app/?embed=true"
+                  class="demo-iframe"
+                  title="The Profit Oracle Demo"
+                ></iframe>
+              </div>
+              <a href="https://theprofitoracle.streamlit.app/" target="_blank" class="project-link">
+                Try It Live →
+              </a>
+            </div>
           </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Deep Learning
-          </span>
-        </div>
-
-        <!-- Skill 5: Neural Networks -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 75) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/neural_networks.png"
-              alt="Neural Networks"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 75%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Neural Networks
-          </span>
-        </div>
-
-        <!-- Skill 6: TensorFlow -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="350"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 60) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/TensorFlow.png"
-              alt="TensorFlow"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 60%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            TensorFlow
-          </span>
-        </div>
-
-        <!-- Skill 7: Scikit-Learn -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/scikit-learn.png"
-              alt="Scikit-Learn"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 70%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Scikit-Learn
-          </span>
-        </div>
-
-        <!-- Skill 8: Streamlit -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="450"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/streamlit.png"
-              alt="Streamlit"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 68%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Streamlit
-          </span>
-        </div>
-
-        <!-- Skill 9: MERN -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="500"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/MERN.png"
-              alt="MERN"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 70%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            MERN
-          </span>
-        </div>
-
-        <!-- Skill 10: Bootstrap -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="550"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 65) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/bootstrap.png"
-              alt="Bootstrap"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 65%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Bootstrap
-          </span>
-        </div>
-
-        <!-- Skill 11: Tailwind -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="600"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/Tailwind.png"
-              alt="Tailwind"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 68%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Tailwind
-          </span>
-        </div>
-
-        <!-- Skill 12: EcmaScript -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="650"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 75) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/ecmascript.png"
-              alt="EcmaScript"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 75%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            EcmaScript
-          </span>
-        </div>
-
-        <!-- Skill 13: MySQL -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="700"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 70) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <!-- removed rounded-full from img class -->
-            <img
-              src="assets/images/logo/mysql.png"
-              alt="MySQL"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 70%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            MySQL
-          </span>
-        </div>
-
-        <!-- Skill 14: PostgreSQL -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="750"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 68) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/postgressql.png"
-              alt="PostgreSQL"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 68%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            PostgreSQL
-          </span>
-        </div>
-
-        <!-- Skill 15: Java -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="800"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 65) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/java.png"
-              alt="Java"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 65%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Java
-          </span>
-        </div>
-
-        <!-- Skill 16: Git -->
-        <div
-          class="relative flex flex-col items-center group"
-          data-aos="fade-up"
-          data-aos-delay="850"
-        >
-          <div class="relative w-32 md:w-30 md:h-30">
-            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <circle
-                cx="50"
-                cy="50"
-                r="47"
-                fill="none"
-                stroke="var(--heading-color)"
-                stroke-width="6"
-                stroke-dasharray="295"
-                stroke-dashoffset="calc(295 - (295 * 75) / 100)"
-                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              />
-            </svg>
-            <img
-              src="assets/images/logo/git.png"
-              alt="Git"
-              class="w-full h-full object-contain transition-all duration-300 group-hover:blur-sm group-hover:opacity-50 group-hover:scale-105"
-            />
-            <p
-              class="absolute inset-0 flex items-center justify-center text-center text-sm md:text-base font-semibold text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-            >
-              Proficiency: 75%
-            </p>
-          </div>
-          <span
-            class="mt-2 text-base md:text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 sf-font"
-          >
-            Git
-          </span>
         </div>
       </div>
     </section>
 
-    <!-- Educations Section -->
-    <section
-      id="educations"
-      class="snap-start min-h-screen w-full flex flex-col items-center justify-start px-6 md:px-24 pt-12 bg-[#121212] text-white overflow-y-auto"
-    >
-      <h2
-        class="text-6xl sm:text-7xl lg:text-8xl font-extrabold mb-12 leading-tight text-center section-header"
-      >
-        Educations
-      </h2>
-      <div class="institute flex flex-col items-center mb-12">
-        <img
-          src="assets/images/logo/lj-logo.png"
-          alt="College Logo"
-          class="w-1/4 mb-4"
-        />
-        <h2 class="text-lg md:text-2xl font-semibold">
-          Bachelor of Engineering in AI & ML
-        </h2>
-
-        <p class="year text-lg text-gray-600">2023 - 2027</p>
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="section-title">Skills & Expertise</h2>
+          <p class="text-xl text-gray-600 mt-4">Technologies I work with</p>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <!-- Skills will be populated by JavaScript -->
+        </div>
       </div>
-      <div
-        class="semester-buttons flex flex-wrap justify-center gap-4 mb-12 mx-auto max-w-full"
-      >
-        <button
-          onclick="showSkills(1)"
-          class="px-4 py-2 bg-blue-600 text-white rounded-lg active:scale-105"
-        >
-          Semester - 1
-        </button>
-        <button
-          onclick="showSkills(2)"
-          class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800"
-        >
-          Semester - 2
-        </button>
-        <button
-          onclick="showSkills(3)"
-          class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800"
-        >
-          Semester - 3
-        </button>
-        <button
-          onclick="showSkills(4)"
-          class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-800"
-        >
-          Semester - 4
-        </button>
-        <button
-          class="px-4 py-2 bg-red-500 text-grey rounded-lg cursor-not-allowed opacity-70"
-        >
-          Semester - 5
-        </button>
-        <button
-          class="px-4 py-2 bg-red-500 text-grey rounded-lg cursor-not-allowed opacity-70"
-        >
-          Semester - 6
-        </button>
-        <button
-          class="px-4 py-2 bg-red-500 text-grey rounded-lg cursor-not-allowed opacity-70"
-        >
-          Semester - 7
-        </button>
-        <button
-          class="px-4 py-2 bg-red-500 text-grey rounded-lg cursor-not-allowed opacity-70"
-        >
-          Semester - 8
-        </button>
-      </div>
-      <h3 class="text-2xl font-semibold mb-8 text-center">Skills Learned</h3>
-      <ul
-        id="college-skills-list-1"
-        class="college-skills-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 hidden mx-auto max-w-3xl"
-      >
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">Java</li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Software Engineering
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Mathematics-1
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Physics
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">IoT</li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Computer Hardware
-        </li>
-      </ul>
-      <ul
-        id="college-skills-list-2"
-        class="college-skills-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 hidden mx-auto max-w-3xl"
-      >
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Advanced Java
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          PostgreSQL
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          MySQL
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Mathematics-2
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Data Structures
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Fundamentals of Electronics
-        </li>
-      </ul>
-      <ul
-        id="college-skills-list-3"
-        class="college-skills-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 hidden mx-auto max-w-3xl"
-      >
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Web Development
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Python
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Probability and Statistics
-        </li>
-      </ul>
-      <ul
-        id="college-skills-list-4"
-        class="college-skills-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6 hidden mx-auto max-w-3xl"
-      >
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Theory of Computation
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Computer Organization
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Discrete Mathematics
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          MERN Stack
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Supervised Machine Learning
-        </li>
-        <li class="p-2 bg-green-500 text-white rounded-lg text-center">
-          Advanced Python
-        </li>
-      </ul>
     </section>
 
-    <!-- Scripts for AOS + Vanta -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.trunk.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="section-title">Education</h2>
+          <p class="text-xl text-gray-600 mt-4">Academic journey and learning path</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="education-card">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+              <div class="education-logo">
+                <img src="assets/images/logo/lj-logo.png" alt="College Logo" class="w-32 h-32 object-contain" />
+              </div>
+              <div class="flex-1 text-center md:text-left">
+                <h3 class="text-3xl font-bold mb-2">Bachelor of Engineering in AI & ML</h3>
+                <p class="text-xl text-gray-600 mb-4">2023 - 2027</p>
+                <div class="semester-selector">
+                  <div class="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
+                    <button class="semester-btn active" data-semester="1">Semester 1</button>
+                    <button class="semester-btn" data-semester="2">Semester 2</button>
+                    <button class="semester-btn" data-semester="3">Semester 3</button>
+                    <button class="semester-btn" data-semester="4">Semester 4</button>
+                    <button class="semester-btn disabled" disabled>Semester 5</button>
+                    <button class="semester-btn disabled" disabled>Semester 6</button>
+                    <button class="semester-btn disabled" disabled>Semester 7</button>
+                    <button class="semester-btn disabled" disabled>Semester 8</button>
+                  </div>
+                  <div class="semester-content">
+                    <div class="semester-skills active" data-semester="1">
+                      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">Software Engineering</span>
+                        <span class="skill-badge">Mathematics-1</span>
+                        <span class="skill-badge">Physics</span>
+                        <span class="skill-badge">IoT</span>
+                        <span class="skill-badge">Computer Hardware</span>
+                      </div>
+                    </div>
+                    <div class="semester-skills" data-semester="2">
+                      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <span class="skill-badge">Advanced Java</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">Mathematics-2</span>
+                        <span class="skill-badge">Data Structures</span>
+                        <span class="skill-badge">Electronics</span>
+                      </div>
+                    </div>
+                    <div class="semester-skills" data-semester="3">
+                      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <span class="skill-badge">Web Development</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Probability & Statistics</span>
+                      </div>
+                    </div>
+                    <div class="semester-skills" data-semester="4">
+                      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <span class="skill-badge">Theory of Computation</span>
+                        <span class="skill-badge">Computer Organization</span>
+                        <span class="skill-badge">Discrete Mathematics</span>
+                        <span class="skill-badge">MERN Stack</span>
+                        <span class="skill-badge">Supervised ML</span>
+                        <span class="skill-badge">Advanced Python</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="text-xl text-gray-600 mt-4">Ready to bring your ideas to life with Machine Learning</p>
+        </div>
+        
+        <div class="max-w-2xl mx-auto text-center">
+          <div class="contact-card">
+            <p class="text-lg text-gray-600 mb-8">
+              I'm always excited to work on innovative projects that make a real impact. 
+              Whether you need ML solutions, data analysis, or want to explore AI possibilities, 
+              let's connect and create something amazing together.
+            </p>
+            
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a 
+                href="mailto:shailpatel.connect@gmail.com?subject=Hiring%20Inquiry:%20Machine%20Learning%20Role&body=Hi%20Shail,%20I%20came%20across%20your%20portfolio%20and%20am%20interested%20in%20discussing%20a%20potential%20opportunity.%20Can%20we%20schedule%20a%20call?"
+                class="btn-3d btn-primary"
+              >
+                <span>Send Email</span>
+              </a>
+              <a href="https://www.linkedin.com/in/shail-k-patel/" target="_blank" class="btn-3d btn-secondary">
+                <span>LinkedIn</span>
+              </a>
+              <a href="http://github.com/ShailKPatel" target="_blank" class="btn-3d btn-secondary">
+                <span>GitHub</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-gray-400">
+          © 2025 Shail K Patel. Crafted with passion for innovation.
+        </p>
+      </div>
+    </footer>
+
     <script src="js/main.js"></script>
   </body>
 </html>
